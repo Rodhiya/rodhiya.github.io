@@ -15,6 +15,12 @@ Syntax highlighted code block
 ## Header 2
 ### Header 3
 
+Interests:
+- Fluid Mechanics
+- Combustion
+- Turbulence
+- Scientific Computing
+
 - Bulleted
 - List
 

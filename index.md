@@ -8,6 +8,12 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
+Interests:
+- Fluid Mechanics
+- Combustion
+- Turbulence
+- Scientific Computing
+
 ```markdown
 Syntax highlighted code block
 
@@ -15,11 +21,7 @@ Syntax highlighted code block
 ## Header 2
 ### Header 3
 
-Interests:
-- Fluid Mechanics
-- Combustion
-- Turbulence
-- Scientific Computing
+
 
 - Bulleted
 - List

@@ -1,14 +1,11 @@
 ## Welcome to Akash Rodhiya's Webpage
+My work focuses on Combustion Concepts that are relevent to low emissions, high efficiency and fuel flexibility of stationary gas turbines for power generation. I study the auto-ignition control mode using massively parallel Direct Numerical Simulations. These simulations generate huge data. So, I use different analyzing and visualization techniques to understand the flow physics.
 
-You can use the [editor on GitHub](https://github.com/Rodhiya/rodhiya.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
+Apart from research, I am very much interested in sports. I like to play Football, Badminton and Cricket
+in particular, but I am up for any sports. I also like adventures sports like trekking and adventure camps.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-Interests:
+### Interests:
 - Fluid Mechanics
 - Combustion
 - Turbulence

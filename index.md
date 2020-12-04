@@ -17,7 +17,7 @@ Interests:
 ## Current Project
 
 ### Pressure scaling of reheat flame structure
-In this work, we are doing direct numerical simulations at different pressure levels (1, 5 and 10 bar) to understand pressure scaling of reheat flame structure. And also quantify the distribution of fractional fuel consumption rate on different modes of combustion using chemical explosive mode analysis (CEMA). 
+In this work, we are doing direct numerical simulations at different pressure levels (1, 5 and 10 bar) to understand pressure scaling of reheat flame structure. And also quantify the distribution of fractional fuel consumption rate on different modes of combustion using chemical explosive mode analysis (CEMA). I have presented this <a href= "pdf/main_u.pdf" target="blank"><b>work</b></a> in the conference American Physical Society- Division of Fluid Dynamics (APS-DFD).
 
 ## Past Projects
 

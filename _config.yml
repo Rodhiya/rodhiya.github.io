@@ -1,18 +1,16 @@
-title: Aditya Rastogi # your name (or website title) here
-logo: "/images/pciture.jpg?raw=true" # your photo (or logo) here
+title: Akash Rodhiya # your name (or website title) here
+logo: "/images/photo2.jpg?raw=true" # your photo (or logo) here
 description: > # your text below (remove <br> elements if you don't need line breaks)
-  PhD Student, Medical Imaging Group
+  M-tech (Research), FLAME lab, 
   <br>
-  Department of Computational and Data Science
+  Department of Computational and Data Sciences,
   <br>
-  Indian Institute of Science
+  Indian Institute of Science Bangalore (2019-present)
   <br><br>
-  B.Tech, Mechanical Engineering
+  Bachelor of Technology in Mechanical Engineering,
   <br>
-  Delhi Technological University
-  <br>
-  2012-2016
+  Indian Institute of Technology (BHU) Varanasi (2015-2019)
+  
 show_downloads: true
-   
 theme: jekyll-theme-minimal
 google_analytics: UA-000000-0 # your Google Analytics tracking ID here

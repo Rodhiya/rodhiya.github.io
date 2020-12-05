@@ -17,7 +17,7 @@ Interests:
 ## Current Projects
 
 ### Pressure scaling of reheat flame structure
-In this work, we are doing direct numerical simulations at different pressure levels (1, 5 and 10 bar) to understand pressure scaling of reheat flame structure. And also quantify the distribution of fractional fuel consumption rate on different modes of combustion using chemical explosive mode analysis (CEMA). I have presented this <a href= "pdf/main_u.pdf" target="blank"><b>work</b></a> in the conference American Physical Society- Division of Fluid Dynamics (APS-DFD).
+In this work, we are doing direct numerical simulations at different pressure levels (1, 5 and 10 bar) to understand pressure scaling of reheat flame structure. And also quantify the distribution of fractional fuel consumption rate on different modes of combustion using chemical explosive mode analysis (CEMA). I have presented this work in the conference American Physical Society- Division of Fluid Dynamics (APS-DFD).
 
 ### Research methods (DS200)
 Main objective of this work is to get familiar with plotting and analyzing real life data using tools in matplotlib. For this, I have used data of 'Primary Energy Consumption in Select Countries of the World from 2012 to 2018' from [data.gov.in](data.gov.in) and represented it by different plots. Link to this project is [here](https://github.com/Rodhiya/DS200)

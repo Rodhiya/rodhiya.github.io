@@ -16,11 +16,11 @@ Interests:
 <br>
 ## Current Projects
 
+### Effect of fuel-blend ratio in methane-hydrogen reheat flames 
+It is hard to use pure hydrogen fuel in current state of the art gas turbine without any compromises. Through this work, we are trying to understand how combustion characterstics transitions with different blending ratios of CH4-H2-air with the help of 2D simulations of reheat burner at 5 bar. Three fuel blends comprised of CH4 and H2 at a ratio 0.5:0.5, 0.3:0.7 and 0:1 by volume are considered. Abstract of this work has been submitted to 74th Annual Meeting of the APS Division of Fluid Dynamics.
+
 ### Pressure scaling of reheat flame structure
 In this work, we are doing direct numerical simulations at different pressure levels (1, 5 and 10 bar) to understand pressure scaling of reheat flame structure. And also quantify the distribution of fractional fuel consumption rate on different modes of combustion using chemical explosive mode analysis (CEMA). I have presented this work in the conference American Physical Society- Division of Fluid Dynamics (APS-DFD).
-
-### Research methods (DS200)
-Main objective of this work is to get familiar with plotting and analyzing real life data using tools in matplotlib. For this, I have used data of 'Primary Energy Consumption in Select Countries of the World from 2012 to 2018' from [data.gov.in](data.gov.in) and represented it by different plots. Link to this project is [here](https://github.com/Rodhiya/DS200)
 
 ## Past Projects
 

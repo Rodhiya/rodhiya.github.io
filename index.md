@@ -24,7 +24,6 @@ In this work, we are doing direct numerical simulations at different pressure le
 
 ## Publications
 
-### 
 Rodhiya, A., Aditya, K., Gruber, A., & Chen, J. H. (2021). [Simulations of flame structure in a reheat burner: pressure scaling](https://arc.aiaa.org/doi/abs/10.2514/6.2021-3448). In AIAA Propulsion and Energy 2021 Forum (p. 3448).
 
 ## Past Projects

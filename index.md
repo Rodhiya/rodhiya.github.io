@@ -22,6 +22,11 @@ It is hard to use pure hydrogen fuel in current state of the art gas turbine wit
 ### Pressure scaling of reheat flame structure
 In this work, we are doing direct numerical simulations at different pressure levels (1, 5 and 10 bar) to understand pressure scaling of reheat flame structure. And also quantify the distribution of fractional fuel consumption rate on different modes of combustion using chemical explosive mode analysis (CEMA). I have presented this work in the conference American Physical Society- Division of Fluid Dynamics (APS-DFD).
 
+## Publications
+
+### 
+Rodhiya, A., Aditya, K., Gruber, A., & Chen, J. H. (2021). [Simulations of flame structure in a reheat burner: pressure scaling](https://arc.aiaa.org/doi/abs/10.2514/6.2021-3448). In AIAA Propulsion and Energy 2021 Forum (p. 3448).
+
 ## Past Projects
 
 ### Thermal Energy storage Battery using Phase Change Material
@@ -34,7 +39,6 @@ Vapor chamber with given dimension constraints and heat flux was designed with t
 
 ### Gym Powered RO purifier
 Reverse osmosis water purified was developed which was powered from a gym equipment (cycle for this project). Most of the parts were used from existing RO purifier exploiting interchangeability.
-
 
 
 

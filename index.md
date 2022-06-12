@@ -33,7 +33,6 @@ Rodhiya, A., Aditya, K., Gruber, A., & Chen, J. H. (2021). [Simulations of flame
 ### 73th Annual Meeting of the Division of Fluid Dynamics, Nov 2020
 [Rodhiya, A., Aditya, K., Gruber, A., & Chen, J. (2020).](https://ui.adsabs.harvard.edu/abs/2020APS..DFDP03004R/abstract). Effect of fuel-blend ratio in methane-hydrogen reheat flames. Bulletin of the American Physical Society, 66.
 
-Rodhiya, A., Aditya, K., Gruber, A., & Chen, J. H. (2021). [Simulations of flame structure in a reheat burner: pressure scaling](https://arc.aiaa.org/doi/abs/10.2514/6.2021-3448). In AIAA Propulsion and Energy 2021 Forum (p. 3448).
 
 ## Past Projects
 

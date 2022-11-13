@@ -1,8 +1,8 @@
 ## About me
 ---
-I am M-Tech (Research) student under [Dr. Konduri Aditya](http://cds.iisc.ac.in/faculty/konduriadi/) in FLAME lab. I completed my Bachelor of Technology in Mechanical Engineering from Indian Institute of Technology (BHU) Varanasi in 2019 with GPA 8.01. In the same year, I joined Department of Computational and Data Sciences at Indian Institute of Science Bangalore. 
+I am Senior Research Fellow under the supervison of [Prof. Mahendra Kumar Verma](https://sites.google.com/view/mahendra-verma/) at Dept. of Physics, IIT Kanpur. I recently completed my M Tech (Research) in Computational Science from Dept. of Computational and Data Sciences, IISc Bangalore with GPA 9.3/10. 
 
-My work focuses on Combustion Concepts that are relevent to low emissions, high efficiency and fuel flexibility of stationary gas turbines for power generation. I study the auto-ignition control mode using massively parallel Direct Numerical Simulations. These simulations generate huge data. So, I use different analyzing and visualization techniques to understand the flow physics.
+My work focuses at IITK focuses on energy transfer between different length scales relevant to Magneto-hydrodynaamics. I am performing peroidic box simulations to study the scaling with different level of mean magnetic field. We uses psuedo-spectral code which is parallised on GPU to perform the simulations. Before that, I was studying the combustion characterics relvant to stationary gas turbines for power generation at IISc Bangalore. For which, I performed the massively parallel Direct Numerical Simulations to study the scaling with the pressure and methane blending.
 
 Apart from research, I am very much interested in sports. I like to play Football, Badminton and Cricket in particular, but I am up for any sports. I also like adventure outings like trekking and adventure camps.
 

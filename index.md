@@ -1,6 +1,6 @@
 ## About me
 ---
-I am Senior Research Fellow under the supervison of [Prof. Mahendra Kumar Verma](https://sites.google.com/view/mahendra-verma/) at Dept. of Physics, IIT Kanpur. I recently completed my M Tech (Research) in Computational Science from Dept. of Computational and Data Sciences, IISc Bangalore with GPA 9.3/10. 
+I am a Senior Research Fellow under the supervison of [Prof. Mahendra Kumar Verma](https://sites.google.com/view/mahendra-verma/) at Dept. of Physics, IIT Kanpur. I recently completed my M Tech (Research) in Computational Science from Dept. of Computational and Data Sciences, IISc Bangalore with GPA 9.3/10. 
 
 My work focuses at IITK focuses on energy transfer between different length scales relevant to Magneto-hydrodynaamics. I am performing peroidic box simulations to study the scaling with different level of mean magnetic field. We uses psuedo-spectral code which is parallised on GPU to perform the simulations. Before that, I was studying the combustion characterics relvant to stationary gas turbines for power generation at IISc Bangalore. For which, I performed the massively parallel Direct Numerical Simulations to study the scaling with the pressure and methane blending.
 
@@ -15,6 +15,9 @@ Interests:
 
 <br>
 ## Current Projects
+
+### Scaling of turbulent flow dynamics with mean magnetic field
+Turbulence is a multi-scale phenomena and it exhibit non-linear transfer of energy between different length scales. The cascade of energy result in energy spectra with interesting properties. Main focus of this project to study the scaling of the energy cascade with the different level of mean magnetic fields. It expected to have steeper slope in the energy spectra due to increase dissipation by the presence of magnetic field. But the mentioned hypothesis is yet to confirm.
 
 ### Effect of fuel-blend ratio in methane-hydrogen reheat flames 
 It is hard to use pure hydrogen fuel in current state of the art gas turbine without any compromises. Through this work, we are trying to understand how combustion characterstics transitions with different blending ratios of CH4-H2-air with the help of 2D simulations of reheat burner at 5 bar. Three fuel blends comprised of CH4 and H2 at a ratio 0.5:0.5, 0.3:0.7 and 0:1 by volume are considered. Abstract of this work has been submitted to 74th Annual Meeting of the APS Division of Fluid Dynamics.

@@ -1,10 +1,10 @@
 ## About me
 ---
-I am a Senior Research Fellow under the supervison of [Prof. Mahendra Kumar Verma](https://sites.google.com/view/mahendra-verma/) at Dept. of Physics, IIT Kanpur. I recently completed my M Tech (Research) in Computational Science from Dept. of Computational and Data Sciences, IISc Bangalore with GPA 9.3/10. 
+I am a Senior Research Fellow under the supervision of [Prof. Mahendra Kumar Verma](https://sites.google.com/view/mahendra-verma/) at Dept. of Physics, IIT Kanpur. I recently completed my M Tech (Research) in Computational Science from the Dept. of Computational and Data Sciences, IISc Bangalore, with a GPA of 9.3/10. 
 
-My work focuses at IITK focuses on energy transfer between different length scales relevant to Magneto-hydrodynaamics. I am performing peroidic box simulations to study the scaling with different level of mean magnetic field. We uses psuedo-spectral code which is parallised on GPU to perform the simulations. Before that, I was studying the combustion characterics relvant to stationary gas turbines for power generation at IISc Bangalore. For which, I performed the massively parallel Direct Numerical Simulations to study the scaling with the pressure and methane blending.
+My work focuses at IITK focuses on energy transfer between different length scales relevant to Magneto-hydrodynaamics. I am performing periodic box simulations to study the scaling with different levels of the mean magnetic field. We use pseudo-spectral code, which is paralysed on GPU, to perform the simulations. Before that, I was studying the combustion characteristics relevant to stationary gas turbines for power generation at IISc Bangalore. For this, I performed the massively parallel Direct Numerical Simulations to study the scaling with the pressure and methane blending.
 
-Apart from research, I am very much interested in sports. I like to play Football, Badminton and Cricket in particular, but I am up for any sports. I also like adventure outings like trekking and adventure camps.
+Apart from research, I am very much interested in sports. I like to play Football, Badminton, and Cricket in particular, but I am up for any sports. I also like adventure outings like trekking and adventure camps.
 
 Interests:
 - Fluid Mechanics

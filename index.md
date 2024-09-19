@@ -1,6 +1,6 @@
 ## About me
 ---
-I am a Doctoral candidate under the supervision of <a href="https://engineering.nyu.edu/faculty/katepalli-sreenivasan" rel="external nofollow noopener" target="_blank">Prof. K. R. Sreenivasan</a> at Mechanical and Aerospace Engineering, Tandon School of Engineering, New York University. I completed my M Tech (Research) in Computational Science from Dept. of Computational and Data Sciences, IISc Bangalore, India.</p>
+I am a Doctoral candidate under the supervision of <a href="https://engineering.nyu.edu/faculty/katepalli-sreenivasan" rel="external nofollow noopener" target="_blank">Prof. K. R. Sreenivasan</a> at Mechanical and Aerospace Engineering, Tandon School of Engineering, New York University. I completed my M Tech (Research) in Computational Science from Dept. of Computational and Data Sciences, IISc Bangalore, India.
 
 <p>I am studying the governing laws of turbulent kinetic energy and length scales for the Decaying Turbulence. We are performing a massively parallel Direct Numerical Simulation of a three-dimensional periodic box. We are in the direction of simulating Decaying turbulence at the highest possible Reynolds number for a considerable flow time duration to analyze a complete picture of the phenomenon.</p>
 

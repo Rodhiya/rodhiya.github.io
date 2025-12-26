@@ -1,62 +1,61 @@
 ## About me
 ---
-I am a Doctoral candidate under the supervision of <a href="https://engineering.nyu.edu/faculty/katepalli-sreenivasan" rel="external nofollow noopener" target="_blank">Prof. K. R. Sreenivasan</a> at Mechanical and Aerospace Engineering, Tandon School of Engineering, New York University. I completed my M Tech (Research) in Computational Science from Dept. of Computational and Data Sciences, IISc Bangalore, India.
+I am a Doctoral Candidate in the Department of Mechanical and Aerospace Engineering at New York University’s Tandon School of Engineering, working under the supervision of <a href="https://engineering.nyu.edu/faculty/katepalli-sreenivasan" rel="external nofollow noopener" target="_blank">Prof. K. R. Sreenivasan</a> Previously, I earned my M.Tech (Research) in Computational Science from the Department of Computational and Data Sciences at the Indian Institute of Science (IISc), Bangalore.
 
-<p>I am studying the governing laws of turbulent kinetic energy and length scales for the Decaying Turbulence. We are performing a massively parallel Direct Numerical Simulation of a three-dimensional periodic box. We are in the direction of simulating Decaying turbulence at the highest possible Reynolds number for a considerable flow time duration to analyze a complete picture of the phenomenon.</p>
+<p>My research investigates the governing laws of turbulent kinetic energy and length scales in decaying turbulence. Using massively parallel Direct Numerical Simulations (DNS) of three-dimensional periodic boxes, I am working toward simulating decaying turbulence at the highest possible Reynolds numbers over extended durations. My goal is to provide a definitive, high-fidelity picture of the long-time evolution of turbulent flows.</p>
 
-<p>Apart from research, I am very much interested in sports. I like to play Football, Badminton and Cricket in particular, but I enjoy exploring any sports. I also like adventure activities such as trekking and camping.</p>
+<p>Beyond the lab, I am a sports enthusiast with a particular love for Football, Badminton, and Cricket. I also enjoy the outdoors through trekking and camping.</p>
 
 Interests:
-- Fluid Mechanics
-- Combustion
-- Turbulence
-- Scientific Computing
+- **Fluid Mechanics**: Fundamental turbulence and high-Reynolds-number flows.
+- **Scientific Computing**: Massively parallel DNS and HPC optimization.
+- **Combustion**: Flame structure and alternative fuel transitions.
+- **Data Analysis**: Interpreting complex physical phenomena through simulation.
 
 
 <br>
 ## Current Projects
 
 ### The Asymptotic State of Decaying Turbulence
-The long-time evolution of decaying homogeneous turbulence is a fundamental problem that awaits a full understanding. We investigate this problem using a comprehensive suite of Direct Numerical Simulations. The energy spectrum is initialized with the Birkhoff-Saffman (BS) form (with $E(k)\sim k^2$ for small $k$) in one case, and the Loitsianskii-Kolmogorov-Batchelor (LKB) form (with $E(k)\sim k^4$ for small $k$) in another. Simulations are performed for unprecedented durations, of the order of 200,000 initial eddy-turnover times. For both BS and LKB, the turbulent kinetic energy $E_n$ shows, after an initial transient, unambiguous power-law decay, $E_n\sim t^{-n}$, with nearly constant decay exponents $n$, whose values are consistent with past theoretical results. The findings are compared with predictions from the recent theory for decaying turbulence developed by Migdal.
+The long-time evolution of decaying homogeneous turbulence remains a fundamental challenge in fluid dynamics. My current work utilizes a comprehensive suite of DNS to investigate this problem. We initialize the energy spectrum using both the Birkhoff-Saffman (BS) form (with $E(k)\sim k^2$ for small $k$) and the Loitsianskii-Kolmogorov-Batchelor (LKB) form (with $E(k)\sim k^4$ for small $k$). 
+
+By extending simulations to unprecedented durations—on the order of 200,000 initial eddy-turnover times—we have observed an unambiguous power-law decay ($E_n\sim t^{-n}$) for both cases. These findings provide critical empirical benchmarks for the recent theory of decaying turbulence developed by Migdal.
 
 
 ## Publications
+**Rodhiya, A.**, Bhattacharya, S., & Verma, M. K. (2025). [Relative accuracy of turbulence simulations using pseudo-spectral and finite difference solvers](https://arxiv.org/abs/2508.10808), Sādhanā (in press)
 
-Rodhiya, A., Aditya, K., Gruber, A., & Chen, J. H. (2021). [Simulations of flame structure in a reheat burner: pressure scaling](https://arc.aiaa.org/doi/abs/10.2514/6.2021-3448). In AIAA Propulsion and Energy 2021 Forum (p. 3448).
+**Rodhiya, A.**, Gruber, A., Bothien, M. R., Chen, J. H., & Aditya, K. (2024). [Spontaneous ignition and flame propagation in hydrogen/methane wrinkled laminar flames at reheat conditions: Effect of pressure and hydrogen fraction](https://www.sciencedirect.com/science/article/abs/pii/S0010218024004048), Combustion and Flame, 269, 113695.
+
+Jonnalagadda, A., Kulkarni, S.,** Rodhiya, A.**, Kolla, H., & Aditya, K. (2023). [A co-kurtosis based dimensionality reduction method for combustion datasets](https://www.sciencedirect.com/science/article/abs/pii/S0010218023000202), Combustion and Flame, 250, 112635.
+
+**Rodhiya, A.**, Aditya, K., Gruber, A., & Chen, J. H. (2021). [Simulations of flame structure in a reheat burner: pressure scaling](https://arc.aiaa.org/doi/abs/10.2514/6.2021-3448). In AIAA Propulsion and Energy 2021 Forum (p. 3448).
 
 ## Selected Talks
 ### 78th Annual Meeting of the Division of Fluid Dynamics, Nov 2025
-[Rodhiya, A., Sajeev, S., Donzis, D. A., Keyes, D. E., & Sreenivasan, K. R. (2025)](https://archive.aps.org/dfd/2025/k27/12/). The Asymptotic State of Decaying Turbulence. Bulletin of the American Physical Society, 66.
-
+[**Rodhiya, A.**, Sajeev, S., Donzis, D. A., Keyes, D. E., & Sreenivasan, K. R. (2025)](https://archive.aps.org/dfd/2025/k27/12/). The Asymptotic State of Decaying Turbulence. Bulletin of the American Physical Society, 66.
 
 ### 74th Annual Meeting of the Division of Fluid Dynamics, Nov 2021
-[Rodhiya, A., Gruber, A., Chen, J.,& Aditya, K. (2021)](https://meetings.aps.org/Meeting/DFD21/Session/M09.10). Effect of fuel-blend ratio in methane-hydrogen reheat flames. Bulletin of the American Physical Society, 66.
-
+[**Rodhiya, A.**, Gruber, A., Chen, J.,& Aditya, K. (2021)](https://meetings.aps.org/Meeting/DFD21/Session/M09.10). Effect of fuel-blend ratio in methane-hydrogen reheat flames. Bulletin of the American Physical Society, 66.
 
 ### 73th Annual Meeting of the Division of Fluid Dynamics, Nov 2020
-[Rodhiya, A., Aditya, K., Gruber, A., & Chen, J. (2020).](https://ui.adsabs.harvard.edu/abs/2020APS..DFDP03004R/abstract). Effect of fuel-blend ratio in methane-hydrogen reheat flames. Bulletin of the American Physical Society, 66.
+[**Rodhiya, A.**, Aditya, K., Gruber, A., & Chen, J. (2020).](https://ui.adsabs.harvard.edu/abs/2020APS..DFDP03004R/abstract). Effect of fuel-blend ratio in methane-hydrogen reheat flames. Bulletin of the American Physical Society, 66.
 
 
 ## Past Projects
 ### Relative accuracy  of turbulence simulations using pseudo-spectral and finite difference solvers
-For a single timestep, a spectral solver is known to be more accurate than its finite-difference counterpart. However, as we discovered that turbulence simulations using the two methods have nearly the same accuracy. we simulate forced hydrodynamic turbulence on a uniform 256$^3$ grid for Reynolds numbers 965, 1231, 1515, and 1994. We demonstrate that the two methods yield nearly identical evolutions for the total energy and flow profiles. In addition, the steady-state energy spectrum, energy flux, and probability distribution functions are very similar. We argue that within a turbulence attractor, the numerical errors are likely to get cancelled (rather than get added up), which leads to similar results for the finite-difference and spectral methods.
+While spectral solvers are theoretically more accurate for a single timestep, our research demonstrated that both methods yield nearly identical results for long-term turbulence simulations. By simulating forced hydrodynamic turbulence on a $256^3$ grid across a range of Reynolds numbers ($965$ to $1994$), we showed that the total energy, flow profiles, and energy flux remained consistent. We propose that within a turbulence attractor, numerical errors tend to cancel out rather than accumulate, leading to converged results across different numerical schemes.
 
 ### Effect of fuel-blend ratio in methane-hydrogen reheat flames 
-It is hard to use pure hydrogen fuel in current state of the art gas turbine without any compromises. Through this work, we are trying to understand how combustion characterstics transitions with different blending ratios of CH4-H2-air with the help of 2D simulations of reheat burner at 5 bar. Three fuel blends comprised of CH4 and H2 at a ratio 0.5:0.5, 0.3:0.7 and 0:1 by volume are considered. Abstract of this work has been submitted to 74th Annual Meeting of the APS Division of Fluid Dynamics.
+To facilitate the transition to carbon-neutral fuels in gas turbines, We investigated the combustion characteristics of various $CH_4-H_2$ blends. Using 2D simulations of a reheat burner at 5 bar, I analyzed three fuel-blend ratios ($0.5:0.5$, $0.3:0.7$, and pure $H_2$ by volume) to understand how hydrogen concentration shifts flame structure and stability.
 
 ### Pressure scaling of reheat flame structure
-In this work, we are doing direct numerical simulations at different pressure levels (1, 5 and 10 bar) to understand pressure scaling of reheat flame structure. And also quantify the distribution of fractional fuel consumption rate on different modes of combustion using chemical explosive mode analysis (CEMA). I have presented this work in the conference American Physical Society- Division of Fluid Dynamics (APS-DFD).
+This project utilized DNS to explore the effects of pressure (1, 5, and 10 bar) on reheat flame structures. I employed Chemical Explosive Mode Analysis (CEMA) to quantify the distribution of fuel consumption rates across different combustion modes, providing insights into how high-pressure environments alter chemical heat release.
 
-### Thermal Energy storage Battery using Phase Change Material
-Battery storage of thermal energy was designed using phase change material. Simulations were performed on STAR CCM+ to compare different heat exchangers and final designed was analyzed using self developed experiment setup. 
-
-
-### Designing of vapor chamber and heat sink for air cooling of laser
-Vapor chamber with given dimension constraints and heat flux was designed with the thorough literature review. Along with this, Heat sink was designed with pin fin. Other configuration with rectangular fin was also considered but it was not efficient as per the requirement.
-
-
-### Gym Powered RO purifier
-Reverse osmosis water purified was developed which was powered from a gym equipment (cycle for this project). Most of the parts were used from existing RO purifier exploiting interchangeability.
+### Engineering Design & Prototyping
+- **Thermal Energy Storage**: Designed a PCM-based battery storage system. I utilized STAR CCM+ to optimize heat exchanger geometry and validated the design using a custom experimental setup.
+- **Laser Cooling Systems**: Developed a high-efficiency vapor chamber and pin-fin heat sink for air-cooling lasers, optimizing for strict dimensional and heat flux constraints.
+- **Sustainable Engineering**: Developed a gym-powered Reverse Osmosis (RO) purifier that utilizes mechanical energy from exercise equipment to drive the filtration process.
 
 
 

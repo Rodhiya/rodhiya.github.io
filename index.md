@@ -4,7 +4,7 @@ I am a Doctoral candidate under the supervision of <a href="https://engineering.
 
 <p>I am studying the governing laws of turbulent kinetic energy and length scales for the Decaying Turbulence. We are performing a massively parallel Direct Numerical Simulation of a three-dimensional periodic box. We are in the direction of simulating Decaying turbulence at the highest possible Reynolds number for a considerable flow time duration to analyze a complete picture of the phenomenon.</p>
 
-<p>Apart from research, I am very much interested in sports. I like to play Football, Badminton and Cricket in particular, but I enjoy exploring any sports. I also like adventure activities such as trekking and camps.</p>
+<p>Apart from research, I am very much interested in sports. I like to play Football, Badminton and Cricket in particular, but I enjoy exploring any sports. I also like adventure activities such as trekking and camping.</p>
 
 Interests:
 - Fluid Mechanics
@@ -16,14 +16,9 @@ Interests:
 <br>
 ## Current Projects
 
-### Scaling of turbulent flow dynamics with mean magnetic field
-Turbulence is a multi-scale phenomena and it exhibit non-linear transfer of energy between different length scales. The cascade of energy result in energy spectra with interesting properties. Main focus of this project to study the scaling of the energy cascade with the different level of mean magnetic fields. It expected to have steeper slope in the energy spectra due to increase dissipation by the presence of magnetic field. But the mentioned hypothesis is yet to confirm.
+### The Asymptotic State of Decaying Turbulence
+The long-time evolution of decaying homogeneous turbulence is a fundamental problem that awaits a full understanding. We investigate this problem using a comprehensive suite of Direct Numerical Simulations. The energy spectrum is initialized with the Birkhoff-Saffman (BS) form (with $E(k)\sim k^2$ for small $k$) in one case, and the Loitsianskii-Kolmogorov-Batchelor (LKB) form (with $E(k)\sim k^4$ for small $k$) in another. Simulations are performed for unprecedented durations, of the order of 200,000 initial eddy-turnover times. For both BS and LKB, the turbulent kinetic energy $E_n$ shows, after an initial transient, unambiguous power-law decay, $E_n\sim t^{-n}$, with nearly constant decay exponents $n$, whose values are consistent with past theoretical results. The findings are compared with predictions from the recent theory for decaying turbulence developed by Migdal.
 
-### Effect of fuel-blend ratio in methane-hydrogen reheat flames 
-It is hard to use pure hydrogen fuel in current state of the art gas turbine without any compromises. Through this work, we are trying to understand how combustion characterstics transitions with different blending ratios of CH4-H2-air with the help of 2D simulations of reheat burner at 5 bar. Three fuel blends comprised of CH4 and H2 at a ratio 0.5:0.5, 0.3:0.7 and 0:1 by volume are considered. Abstract of this work has been submitted to 74th Annual Meeting of the APS Division of Fluid Dynamics.
-
-### Pressure scaling of reheat flame structure
-In this work, we are doing direct numerical simulations at different pressure levels (1, 5 and 10 bar) to understand pressure scaling of reheat flame structure. And also quantify the distribution of fractional fuel consumption rate on different modes of combustion using chemical explosive mode analysis (CEMA). I have presented this work in the conference American Physical Society- Division of Fluid Dynamics (APS-DFD).
 
 ## Publications
 
@@ -43,6 +38,14 @@ Rodhiya, A., Aditya, K., Gruber, A., & Chen, J. H. (2021). [Simulations of flame
 
 
 ## Past Projects
+### Relative accuracy  of turbulence simulations using pseudo-spectral and finite difference solvers
+For a single timestep, a spectral solver is known to be more accurate than its finite-difference counterpart. However, as we discovered that turbulence simulations using the two methods have nearly the same accuracy. we simulate forced hydrodynamic turbulence on a uniform 256$^3$ grid for Reynolds numbers 965, 1231, 1515, and 1994. We demonstrate that the two methods yield nearly identical evolutions for the total energy and flow profiles. In addition, the steady-state energy spectrum, energy flux, and probability distribution functions are very similar. We argue that within a turbulence attractor, the numerical errors are likely to get cancelled (rather than get added up), which leads to similar results for the finite-difference and spectral methods.
+
+### Effect of fuel-blend ratio in methane-hydrogen reheat flames 
+It is hard to use pure hydrogen fuel in current state of the art gas turbine without any compromises. Through this work, we are trying to understand how combustion characterstics transitions with different blending ratios of CH4-H2-air with the help of 2D simulations of reheat burner at 5 bar. Three fuel blends comprised of CH4 and H2 at a ratio 0.5:0.5, 0.3:0.7 and 0:1 by volume are considered. Abstract of this work has been submitted to 74th Annual Meeting of the APS Division of Fluid Dynamics.
+
+### Pressure scaling of reheat flame structure
+In this work, we are doing direct numerical simulations at different pressure levels (1, 5 and 10 bar) to understand pressure scaling of reheat flame structure. And also quantify the distribution of fractional fuel consumption rate on different modes of combustion using chemical explosive mode analysis (CEMA). I have presented this work in the conference American Physical Society- Division of Fluid Dynamics (APS-DFD).
 
 ### Thermal Energy storage Battery using Phase Change Material
 Battery storage of thermal energy was designed using phase change material. Simulations were performed on STAR CCM+ to compare different heat exchangers and final designed was analyzed using self developed experiment setup. 

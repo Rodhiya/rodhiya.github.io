@@ -27,7 +27,7 @@ By extending simulations to unprecedented durations—on the order of 200,000 in
 
 **Rodhiya, A.**, Gruber, A., Bothien, M. R., Chen, J. H., & Aditya, K. (2024). [Spontaneous ignition and flame propagation in hydrogen/methane wrinkled laminar flames at reheat conditions: Effect of pressure and hydrogen fraction](https://www.sciencedirect.com/science/article/abs/pii/S0010218024004048), Combustion and Flame, 269, 113695.
 
-Jonnalagadda, A., Kulkarni, S.,** Rodhiya, A.**, Kolla, H., & Aditya, K. (2023). [A co-kurtosis based dimensionality reduction method for combustion datasets](https://www.sciencedirect.com/science/article/abs/pii/S0010218023000202), Combustion and Flame, 250, 112635.
+Jonnalagadda, A., Kulkarni, S., **Rodhiya, A.**, Kolla, H., & Aditya, K. (2023). [A co-kurtosis based dimensionality reduction method for combustion datasets](https://www.sciencedirect.com/science/article/abs/pii/S0010218023000202), Combustion and Flame, 250, 112635.
 
 **Rodhiya, A.**, Aditya, K., Gruber, A., & Chen, J. H. (2021). [Simulations of flame structure in a reheat burner: pressure scaling](https://arc.aiaa.org/doi/abs/10.2514/6.2021-3448). In AIAA Propulsion and Energy 2021 Forum (p. 3448).
 

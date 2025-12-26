@@ -30,8 +30,13 @@ In this work, we are doing direct numerical simulations at different pressure le
 Rodhiya, A., Aditya, K., Gruber, A., & Chen, J. H. (2021). [Simulations of flame structure in a reheat burner: pressure scaling](https://arc.aiaa.org/doi/abs/10.2514/6.2021-3448). In AIAA Propulsion and Energy 2021 Forum (p. 3448).
 
 ## Selected Talks
+### 78th Annual Meeting of the Division of Fluid Dynamics, Nov 2025
+[Rodhiya, A., Sajeev, S., Donzis, D. A., Keyes, D. E., & Sreenivasan, K. R. (2025)](https://archive.aps.org/dfd/2025/k27/12/). The Asymptotic State of Decaying Turbulence. Bulletin of the American Physical Society, 66.
+
+
 ### 74th Annual Meeting of the Division of Fluid Dynamics, Nov 2021
 [Rodhiya, A., Gruber, A., Chen, J.,& Aditya, K. (2021)](https://meetings.aps.org/Meeting/DFD21/Session/M09.10). Effect of fuel-blend ratio in methane-hydrogen reheat flames. Bulletin of the American Physical Society, 66.
+
 
 ### 73th Annual Meeting of the Division of Fluid Dynamics, Nov 2020
 [Rodhiya, A., Aditya, K., Gruber, A., & Chen, J. (2020).](https://ui.adsabs.harvard.edu/abs/2020APS..DFDP03004R/abstract). Effect of fuel-blend ratio in methane-hydrogen reheat flames. Bulletin of the American Physical Society, 66.

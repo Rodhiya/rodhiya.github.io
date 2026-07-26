@@ -22,5 +22,4 @@ I am a Doctoral Candidate in the Department of Mechanical and Aerospace Engineer
 
 My research investigates the governing laws of turbulent kinetic energy and length scales in decaying turbulence. Using massively parallel Direct Numerical Simulations (DNS) of three-dimensional periodic boxes, I am working toward simulating decaying turbulence at the highest possible Reynolds numbers over extended durations. My goal is to provide a definitive, high-fidelity picture of the long-time evolution of turbulent flows.
 
-Beyond the lab, I am a sports enthusiast with a particular love for Football, Badminton, and Cricket. I also enjoy the outdoors through trekking and camping.</p>
-
+Beyond the lab, I am a sports enthusiast with a particular love for Football, Badminton, and Cricket. I also enjoy the outdoors through trekking and camping.

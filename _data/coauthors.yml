@@ -1,34 +1,38 @@
-"Adams":
-  - firstname: ["Edwin", "E.", "E. P.", "Edwin Plimpton"]
-    url: https://en.wikipedia.org/wiki/Edwin_Plimpton_Adams
+"Aditya":
+  - firstname: ["Konduri", "K."]
 
-"Podolsky":
-  - firstname: ["Boris", "B.", "B. Y.", "Boris Yakovlevich"]
-    url: https://en.wikipedia.org/wiki/Boris_Podolsky
+"Gruber":
+  - firstname: ["Andrea", "A."]
 
-"Rosen":
-  - firstname: ["Nathan", "N."]
-    url: https://en.wikipedia.org/wiki/Nathan_Rosen
+"Chen":
+  - firstname: ["Jacqueline H.", "Jacqueline", "J. H.", "J."]
 
-"Bach": 
-  - firstname: ["Johann Sebastian", "J. S."]
-    url: https://en.wikipedia.org/wiki/Johann_Sebastian_Bach
+"Bothien":
+  - firstname: ["Mirko R.", "Mirko", "M. R."]
 
-  - firstname: ["Carl Philipp Emanuel", "C. P. E."]
-    url: https://en.wikipedia.org/wiki/Carl_Philipp_Emanuel_Bach
+"Bhattacharya":
+  - firstname: ["Shashwat", "S."]
 
-"Przibram":
-  - firstname: ["Karl"]
-    url: https://link.springer.com/article/10.1007/s00016-019-00242-z
+"Verma":
+  - firstname: ["Mahendra K.", "Mahendra", "M. K."]
 
-"Schrödinger":
-  - firstname: ["Erwin"]
-    url: https://en.wikipedia.org/wiki/Erwin_Schr%C3%B6dinger
+"Sreenivasan":
+  - firstname: ["Katepalli R.", "Katepalli", "K. R."]
 
-"Lorentz":
-  - firstname: ["Hendrik Antoon"]
-    url: https://en.wikipedia.org/wiki/Hendrik_Lorentz
+"Donzis":
+  - firstname: ["Diego A.", "Diego", "D. A."]
 
-"Planck":
-  - firstname: ["Max"]
-    url: https://en.wikipedia.org/wiki/Max_Planck
+"Keyes":
+  - firstname: ["David E.", "David", "D. E."]
+
+"Sajeev":
+  - firstname: ["Shilpa", "S."]
+
+"Jonnalagadda":
+  - firstname: ["Anirudh", "A."]
+
+"Kolla":
+  - firstname: ["Hemanth", "H."]
+
+"Kulkarni":
+  - firstname: ["Shubham", "S."]

@@ -1,12 +1,8 @@
+# GitHub users whose profile cards are shown on the /repositories/ page
 github_users:
-  - torvalds
-  - alshedivat
+  - Rodhiya
 
+# Repositories to feature on the /repositories/ page.
+# Replace/extend with your own repos, e.g. Rodhiya/rodhiya.github.io
 github_repos:
-  - alshedivat/al-folio
-  - twbs/bootstrap
-  - jekyll/jekyll
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - jpswalsh/academicons
-  - mathjax/MathJax
+  - Rodhiya/rodhiya.github.io

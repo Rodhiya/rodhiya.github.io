@@ -2,100 +2,106 @@
   type: map
   contents:
     - name: Full Name
-      value: Akash Rodhiya 
+      value: Akash Rodhiya
+    - name: Email
+      value: akash.rodhiya@nyu.edu
+    - name: Website
+      value: <a href="https://rodhiya.github.io/">rodhiya.github.io</a>
+    - name: ORCID
+      value: <a href="https://orcid.org/0000-0002-3272-7429">0000-0002-3272-7429</a>
     - name: Languages
       value: English, Hindi
+
+- title: Summary
+  type: list
+  contents:
+    - PhD researcher in CFD and turbulence with experience in large-scale direct numerical simulation (DNS), HPC workflows on national supercomputers, pseudo-spectral and finite-difference Navier–Stokes solvers, and Python-based post-processing of multi-terabyte datasets. Applied background in turbulence theory, solver verification, GPU acceleration, and machine-learning surrogates for scientific computing.
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: Mechanical and Aerospace Engineering, Tandon School of Engineering, New York University 
-      year: 2023 to Present 
+    - title: PhD, Doctoral Student
+      institution: Tandon School of Engineering, New York University, New York
+      year: 2023 - Present
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Masters of Technology (Research)
-      institution: Department of Computational and Data Sciences, Indian Institute of Science Bangalore, India
-      year: 2019 to 2022
+        - "Department of Mechanical and Aerospace Engineering. GPA: 3.9/4"
+        - "Advisor: Prof. Katepalli R. Sreenivasan"
+    - title: M.Tech (Research)
+      institution: Department of Computational and Data Sciences, Indian Institute of Science (IISc) Bangalore, India
+      year: 2019 - 2022
       description:
-        - Description 1.
-        - Description 2.
-    - title: Bachelor of Technology
-      institution: Department of Mechanical Engineering, Indian Institute of Technology (BHU) Varanasi
-      year: 2015 to 2019
+        - "Computational and Data Sciences. GPA: 9.3/10"
+    - title: B.Tech
+      institution: Department of Mechanical Engineering, Indian Institute of Technology (BHU) Varanasi, India
+      year: 2015 - 2019
       description:
-        - Description 1.
-        - Description 2.
+        - "Mechanical Engineering. GPA: 8.0/10"
 
-- title: Experience
+- title: Research Experience
   type: time_table
   contents:
-    - title: Senior Research Fellow 
-      institution: Department of Physics, Indian Institute of Technology Kanpur, Indian 
-      year: 2022 to 2023
+    - title: PhD Thesis — Decaying Turbulence via Direct Numerical Simulations
+      institution: New York University
+      year: 2024 - Present
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
+        - Ran record-duration pseudo-spectral DNS (to 4096³) over ~200,000 eddy-turnover times, Re_λ = 30–145, resolving the asymptotic decay exponent by separating Birkhoff–Saffman (k²) and Loitsianskii–Kolmogorov–Batchelor (k⁴) regimes; benchmarked against Migdal's field-theoretic predictions.
+        - Designed a dynamic regridding scheme (coarsening as scales grow) that cut computational cost >5× while preserving turbulence statistics.
+        - Built a modular single-GPU pseudo-spectral Navier–Stokes solver in C++/CUDA (cuFFT, RK2, divergence-free projection); extending it to a multi-node multi-GPU solver with cuFFTMp/NVSHMEM, validated to machine precision.
+        - Developing ML surrogates coupling energy-spectrum forecasting with conditional velocity-field generation, validated against DNS.
+        - Ran production campaigns on TACC (ACCESS), NYU Greene, and KAUST Shaheen III; released reproducibility data and figure scripts.
+    - title: Research Assistant — Numerical Solver Accuracy Analysis
+      institution: IIT Kanpur
+      year: 2022 - 2023
       description:
-        - Description 1.
-        - Description 2.
-
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
+        - Compared pseudo-spectral (Py-Tarang) and finite-difference (Py-Saras) solvers on forced homogeneous turbulence (256³, Re up to ~2000), showing that despite higher per-timestep error, the FD solver matches spectral accuracy in energy evolution, spectra, flux, and velocity-derivative PDFs.
+        - Argued and demonstrated that numerical errors largely cancel within the turbulence attractor, supporting the use of more scalable FD solvers for large-grid DNS.
+        - Ran GPU-accelerated 3D simulations using in-house CuPy frameworks on NVIDIA hardware to quantify discretization and spectral accuracy.
+    - title: Masters Thesis — Hydrogen/Methane Combustion & Dimensionality Reduction
+      institution: Indian Institute of Science (IISc)
+      year: 2019 - 2022
       description:
+        - Performed detailed-chemistry DNS of high-pressure hydrogen/methane wrinkled laminar flames at reheat (sequential gas-turbine) conditions using the massively parallel S3D solver with CHEMKIN/TRANSPORT and reduced San Diego mechanisms.
+        - Quantified the split between spontaneous-ignition and flame-propagation fuel consumption versus pressure and hydrogen fraction, using chemical explosive mode analysis (CEMA).
+        - Co-developed co-kurtosis PCA (CoK-PCA), a high-order-moment dimensionality-reduction method that identifies stiff, extreme-valued chemical dynamics (e.g. ignition kernels) more accurately than standard PCA.
 
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
-
-- title: Open Source Projects
-  type: time_table
-  contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
-
-- title: Honors and Awards
-  type: time_table
-  contents:
-    - year: 1921
-      items: 
-        - Nobel Prize in Physics 
-        - Matteucci Medal
-    - year: 2029
-      items: 
-        - Max Planck Medal
-
-- title: Academic Interests
+- title: Technical Skills
   type: nested_list
   contents:
-    - title: Topic 1.
-      items: 
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
+    - title: Programming
       items:
-        - Description 1.
-        - Description 2.
+        - Python, C++, CUDA, Fortran, MATLAB, Bash, Git
+    - title: Data / ML
+      items:
+        - NumPy, SciPy, PyTorch, neural operators, transformers, dimensionality reduction (PCA / co-kurtosis PCA)
+    - title: HPC / Scientific Computing
+      items:
+        - MPI, OpenMP, Slurm, pseudo-spectral & finite-difference DNS, cuFFT, GPU acceleration (CuPy), large-scale (multi-TB) post-processing
+    - title: HPC Platforms
+      items:
+        - TACC (Frontera, via ACCESS), NYU Greene, KAUST Shaheen III
+    - title: Simulation / Engineering Tools
+      items:
+        - STAR-CCM+, ANSYS, HyperMesh, SolidWorks, VisIt, Matplotlib
+
+- title: Training & Professional Development
+  type: time_table
+  contents:
+    - title: Burgers Program Summer School on Turbulence
+      institution: University of Maryland
+      year: 2024
+    - title: "ICISS: Near-Wall Reactive Flows"
+      institution: TU Darmstadt (Virtual)
+      year: 2021
+    - title: High-Performance Computing Workshop
+      institution: SERC, IISc Bangalore
+      year: 2019
+
+- title: Academic Achievements
+  type: list
+  contents:
+    - Top 1.22% in GATE 2019 (Mechanical Engineering); Top 0.9% in JEE Mains 2015.
 
 - title: Other Interests
   type: list
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - "<u>Hobbies:</u> Football, Badminton, Cricket, trekking, and camping."

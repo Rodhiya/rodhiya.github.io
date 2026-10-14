@@ -17,6 +17,7 @@
   --global-footer-link-color: #ffffff;
   --global-distill-app-color: #828282;
   --global-divider-color: rgba(0,0,0,.1);
+  --global-year-color: #4a4a4a;
   --global-card-bg-color: #ffffff;
 }
 :root .fa-sun {
@@ -46,6 +47,7 @@ html[data-theme=dark] {
   --global-footer-link-color: #000000;
   --global-distill-app-color: #e8e8e8;
   --global-divider-color: #424246;
+  --global-year-color: #424246;
   --global-card-bg-color: #212529;
 }
 html[data-theme=dark] .fa-sun {
@@ -520,11 +522,11 @@ footer.sticky-bottom {
   font-size: 1.5rem;
 }
 .publications h2.year {
-  color: var(--global-divider-color);
+  color: var(--global-year-color);
   border-top: 1px solid var(--global-divider-color);
   padding-top: 1rem;
   margin-top: 2rem;
-  margin-bottom: -2rem;
+  margin-bottom: 0.5rem;
   text-align: right;
 }
 .publications ol.bibliography {

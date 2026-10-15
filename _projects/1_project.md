@@ -2,7 +2,7 @@
 layout: page
 title: Decaying Turbulence via DNS
 description: The asymptotic state of decaying homogeneous turbulence, resolved with record-duration direct numerical simulations.
-img: assets/img/12.jpg
+img: assets/img/decayingTurb.png
 importance: 1
 category: research
 related_publications: true

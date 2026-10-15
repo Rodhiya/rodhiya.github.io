@@ -2,7 +2,7 @@
 layout: page
 title: Pseudo-spectral vs. Finite-Difference Solvers
 description: Relative accuracy of numerical schemes for long-time turbulence simulation.
-img: assets/img/3.jpg
+img: assets/img/FDvsPsuedo.png
 importance: 2
 category: research
 ---

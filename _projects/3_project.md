@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Hydrogen/Methane Reheat Combustion
+title: Hydrogen and its blend in Reheat Combustion
 description: Detailed-chemistry DNS of hydrogen/methane flames at reheat gas-turbine conditions, and a high-order dimensionality-reduction method.
-img: assets/img/6.jpg
+img: assets/img/temp_p10_v150_3466_u2.png
 importance: 3
 category: research
 ---

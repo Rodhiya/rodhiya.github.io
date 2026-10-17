@@ -15,6 +15,11 @@
   --global-distill-app-color: #{$grey-color};
   --global-divider-color: rgba(0,0,0,.1);
   --global-year-color: #4a4a4a;
+  --global-panel-bg-color: #f7f7f7;
+  --global-button-bg-color: #{$black-color};
+  --global-button-text-color: #{$white-color};
+  --global-site-footer-bg-color: #{$grey-color-dark};
+  --global-site-footer-text-color: #c8c8c8;
   --global-card-bg-color: #{$white-color};
 
   .fa-sun {
@@ -47,6 +52,11 @@ html[data-theme='dark'] {
   --global-distill-app-color: #{$grey-color-light};
   --global-divider-color: #424246;
   --global-year-color: #424246;
+  --global-panel-bg-color: #2a2a2d;
+  --global-button-bg-color: #{$grey-color-light};
+  --global-button-text-color: #{$grey-color-dark};
+  --global-site-footer-bg-color: #111112;
+  --global-site-footer-text-color: #a8a8a8;
   --global-card-bg-color: #{$grey-900};
 
   .fa-sun {

@@ -28,11 +28,6 @@ layout: default
               class=profile_image_class
               alt=page.profile.image -%}
             {% endif -%}
-            {%- if page.profile.address %}
-            <div class="address">
-              {{ page.profile.address }}
-            </div>
-            {%- endif %}
           </div>
           {%- endif %}
 
@@ -42,29 +37,18 @@ layout: default
 
           <!-- News -->
           {% if page.news -%}
-            <h2><a href="{{ '/news/' | relative_url }}" style="color: inherit;">news</a></h2>
-            {%- include news.html %}
+            <div class="news-card">
+              <h2><a href="{{ '/news/' | relative_url }}" style="color: inherit;">News</a></h2>
+              {%- include news.html %}
+            </div>
           {%- endif %}
 
           <!-- Selected papers -->
           {% if page.selected_papers -%}
-            <h2 style="margin-top: 3rem;"><a href="{{ '/publications/' | relative_url }}" style="color: inherit;">selected publications</a></h2>
+            <h2 style="margin-top: 3rem;"><a href="{{ '/publications/' | relative_url }}" style="color: inherit;">Selected Publications</a></h2>
             {%- include selected_papers.html %}
           {%- endif %}
 
-          <!-- Social -->
-          {%- if page.social %}
-            <div class="social">
-              <div class="contact-icons">
-                {% include social.html %}
-              </div>
-
-              <div class="contact-note">
-                {{ site.contact_note }}
-              </div>
-              
-            </div>
-          {%- endif %}
         </article>
 
 </div>

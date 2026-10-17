@@ -1,0 +1,257 @@
+/*******************************************************************************
+ * Redesign (based on website_template.jpeg)
+ * Loaded last, so these rules override the al-folio defaults in _base.scss.
+ ******************************************************************************/
+
+body {
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+}
+
+// Navbar: centered links, theme toggle pinned to the right
+
+.navbar .container {
+  position: relative;
+}
+
+.navbar.navbar-light .navbar-nav .nav-item .nav-link {
+  text-transform: capitalize;
+  font-size: 1rem;
+}
+
+.navbar.navbar-light .navbar-nav .nav-item.active>.nav-link {
+  color: var(--global-text-color);
+  font-weight: 600;
+}
+
+@media (min-width: 576px) {
+  .navbar.navbar-light .navbar-nav .nav-item .nav-link {
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+  }
+
+  .navbar .toggle-container {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .navbar #light-toggle .fa-moon,
+  .navbar #light-toggle .fa-sun {
+    padding-top: 0;
+  }
+}
+
+// Home page header
+
+.post-header {
+  margin-bottom: 2.5rem;
+
+  .post-title {
+    font-size: 2.5rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .desc {
+    font-size: 0.9rem;
+
+    a {
+      color: var(--global-theme-color);
+      text-decoration: underline;
+    }
+  }
+}
+
+// News card
+
+.news-card {
+  margin-top: 4rem;
+  padding: 1.25rem 1.5rem 0.75rem;
+  background-color: var(--global-panel-bg-color);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 6px;
+
+  h2 {
+    margin-bottom: 1rem;
+  }
+
+  .news table {
+    color: var(--global-text-color);
+    background-color: transparent;
+    margin-bottom: 0;
+
+    th {
+      font-weight: 400;
+      white-space: nowrap;
+      width: 8rem;
+    }
+
+    @media (max-width: 575px) {
+      th {
+        width: auto;
+        padding-right: 0.75rem;
+      }
+    }
+  }
+}
+
+// Publication entries (home page and publications page)
+
+.publications ol.bibliography li {
+  margin-bottom: 2.5rem;
+
+  .col-sm-auto.preview {
+    width: auto;
+    min-width: 0;
+    max-width: none;
+  }
+
+  .preview figure {
+    margin: 0 0 0.75rem;
+  }
+
+  img.preview {
+    width: 100px;
+    min-width: 0;
+    height: 100px;
+    object-fit: cover;
+  }
+
+  .abbr {
+    height: auto;
+
+    abbr {
+      white-space: normal;
+      max-width: 100px;
+    }
+  }
+
+  .title {
+    font-weight: 500;
+    font-size: 1.1rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .author {
+    font-size: 0.85rem;
+    color: var(--global-theme-color);
+
+    a {
+      color: var(--global-theme-color);
+    }
+
+    >em {
+      border-bottom: none;
+      font-weight: 600;
+    }
+  }
+
+  .periodical {
+    font-size: 0.9rem;
+
+    em {
+      font-style: normal;
+    }
+  }
+
+  .links {
+    margin-top: 0.4rem;
+
+    a.btn {
+      color: var(--global-button-text-color);
+      background-color: var(--global-button-bg-color);
+      border: none;
+      border-radius: 3px;
+      font-size: 0.75rem;
+      text-transform: none;
+      padding: 0.25rem 0.6rem;
+      margin-left: 0;
+
+      &:hover {
+        color: $white-color;
+        background-color: var(--global-theme-color);
+      }
+    }
+  }
+}
+
+// Footer
+
+footer.sticky-bottom.site-footer {
+  margin-top: 6rem;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  border-top: none;
+  background-color: var(--global-site-footer-bg-color);
+  color: var(--global-site-footer-text-color);
+  // The theme colors every div/p/span with --global-text-color, so override it here.
+  --global-text-color: var(--global-site-footer-text-color);
+  font-size: 0.9rem;
+
+  a {
+    color: $white-color;
+
+    &:hover {
+      color: var(--global-site-footer-text-color);
+      text-decoration: none;
+    }
+  }
+
+  .footer-name {
+    color: $white-color;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-address p {
+    margin: 0;
+  }
+
+  .footer-social {
+    margin-top: 1.5rem;
+
+    .contact-icons {
+      font-size: 1.75rem;
+
+      a {
+        margin-right: 0.75rem;
+      }
+
+      i::before {
+        color: var(--global-site-footer-text-color);
+      }
+
+      a:hover i::before {
+        color: $white-color;
+      }
+    }
+
+    .contact-note {
+      font-size: 0.8rem;
+      margin-top: 0.25rem;
+    }
+  }
+
+  .footer-copyright {
+    margin-top: 2.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.75rem;
+  }
+}
+
+@media (min-width: 576px) {
+  footer.sticky-bottom.site-footer .footer-social {
+    margin-top: 0;
+    text-align: right;
+
+    .contact-icons a {
+      margin-right: 0;
+      margin-left: 0.75rem;
+    }
+  }
+}

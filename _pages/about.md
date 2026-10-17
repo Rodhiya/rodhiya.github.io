@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Affiliation; <a href='https://engineering.nyu.edu/'>Tandon School of Engineering, New York University</a>  
+subtitle: <a href='https://engineering.nyu.edu/'>Tandon School of Engineering, New York University</a>
 
 profile:
   align: right

@@ -18,6 +18,11 @@
   --global-distill-app-color: #828282;
   --global-divider-color: rgba(0,0,0,.1);
   --global-year-color: #4a4a4a;
+  --global-panel-bg-color: #f7f7f7;
+  --global-button-bg-color: #000000;
+  --global-button-text-color: #ffffff;
+  --global-site-footer-bg-color: #1C1C1D;
+  --global-site-footer-text-color: #c8c8c8;
   --global-card-bg-color: #ffffff;
 }
 :root .fa-sun {
@@ -48,6 +53,11 @@ html[data-theme=dark] {
   --global-distill-app-color: #e8e8e8;
   --global-divider-color: #424246;
   --global-year-color: #424246;
+  --global-panel-bg-color: #2a2a2d;
+  --global-button-bg-color: #e8e8e8;
+  --global-button-text-color: #1C1C1D;
+  --global-site-footer-bg-color: #111112;
+  --global-site-footer-text-color: #a8a8a8;
   --global-card-bg-color: #212529;
 }
 html[data-theme=dark] .fa-sun {
@@ -892,6 +902,215 @@ d-appendix a:hover, d-appendix a.footnote-backlink:hover {
   }
   d-article d-contents nav {
     grid-column: none;
+  }
+}
+/*******************************************************************************
+ * Redesign (based on website_template.jpeg)
+ * Loaded last, so these rules override the al-folio defaults in _base.scss.
+ ******************************************************************************/
+body {
+  font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+}
+
+.navbar .container {
+  position: relative;
+}
+
+.navbar.navbar-light .navbar-nav .nav-item .nav-link {
+  text-transform: capitalize;
+  font-size: 1rem;
+}
+
+.navbar.navbar-light .navbar-nav .nav-item.active > .nav-link {
+  color: var(--global-text-color);
+  font-weight: 600;
+}
+
+@media (min-width: 576px) {
+  .navbar.navbar-light .navbar-nav .nav-item .nav-link {
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+  }
+  .navbar .toggle-container {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .navbar #light-toggle .fa-moon,
+  .navbar #light-toggle .fa-sun {
+    padding-top: 0;
+  }
+}
+.post-header {
+  margin-bottom: 2.5rem;
+}
+.post-header .post-title {
+  font-size: 2.5rem;
+  margin-bottom: 0.25rem;
+}
+.post-header .desc {
+  font-size: 0.9rem;
+}
+.post-header .desc a {
+  color: var(--global-theme-color);
+  text-decoration: underline;
+}
+
+.news-card {
+  margin-top: 4rem;
+  padding: 1.25rem 1.5rem 0.75rem;
+  background-color: var(--global-panel-bg-color);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 6px;
+}
+.news-card h2 {
+  margin-bottom: 1rem;
+}
+.news-card .news table {
+  color: var(--global-text-color);
+  background-color: transparent;
+  margin-bottom: 0;
+}
+.news-card .news table th {
+  font-weight: 400;
+  white-space: nowrap;
+  width: 8rem;
+}
+@media (max-width: 575px) {
+  .news-card .news table th {
+    width: auto;
+    padding-right: 0.75rem;
+  }
+}
+
+.publications ol.bibliography li {
+  margin-bottom: 2.5rem;
+}
+.publications ol.bibliography li .col-sm-auto.preview {
+  width: auto;
+  min-width: 0;
+  max-width: none;
+}
+.publications ol.bibliography li .preview figure {
+  margin: 0 0 0.75rem;
+}
+.publications ol.bibliography li img.preview {
+  width: 100px;
+  min-width: 0;
+  height: 100px;
+  object-fit: cover;
+}
+.publications ol.bibliography li .abbr {
+  height: auto;
+}
+.publications ol.bibliography li .abbr abbr {
+  white-space: normal;
+  max-width: 100px;
+}
+.publications ol.bibliography li .title {
+  font-weight: 500;
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+}
+.publications ol.bibliography li .author {
+  font-size: 0.85rem;
+  color: var(--global-theme-color);
+}
+.publications ol.bibliography li .author a {
+  color: var(--global-theme-color);
+}
+.publications ol.bibliography li .author > em {
+  border-bottom: none;
+  font-weight: 600;
+}
+.publications ol.bibliography li .periodical {
+  font-size: 0.9rem;
+}
+.publications ol.bibliography li .periodical em {
+  font-style: normal;
+}
+.publications ol.bibliography li .links {
+  margin-top: 0.4rem;
+}
+.publications ol.bibliography li .links a.btn {
+  color: var(--global-button-text-color);
+  background-color: var(--global-button-bg-color);
+  border: none;
+  border-radius: 3px;
+  font-size: 0.75rem;
+  text-transform: none;
+  padding: 0.25rem 0.6rem;
+  margin-left: 0;
+}
+.publications ol.bibliography li .links a.btn:hover {
+  color: #ffffff;
+  background-color: var(--global-theme-color);
+}
+
+footer.sticky-bottom.site-footer {
+  margin-top: 6rem;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  border-top: none;
+  background-color: var(--global-site-footer-bg-color);
+  color: var(--global-site-footer-text-color);
+  --global-text-color: var(--global-site-footer-text-color);
+  font-size: 0.9rem;
+}
+footer.sticky-bottom.site-footer a {
+  color: #ffffff;
+}
+footer.sticky-bottom.site-footer a:hover {
+  color: var(--global-site-footer-text-color);
+  text-decoration: none;
+}
+footer.sticky-bottom.site-footer .footer-name {
+  color: #ffffff;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+footer.sticky-bottom.site-footer .footer-address p {
+  margin: 0;
+}
+footer.sticky-bottom.site-footer .footer-social {
+  margin-top: 1.5rem;
+}
+footer.sticky-bottom.site-footer .footer-social .contact-icons {
+  font-size: 1.75rem;
+}
+footer.sticky-bottom.site-footer .footer-social .contact-icons a {
+  margin-right: 0.75rem;
+}
+footer.sticky-bottom.site-footer .footer-social .contact-icons i::before {
+  color: var(--global-site-footer-text-color);
+}
+footer.sticky-bottom.site-footer .footer-social .contact-icons a:hover i::before {
+  color: #ffffff;
+}
+footer.sticky-bottom.site-footer .footer-social .contact-note {
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+}
+footer.sticky-bottom.site-footer .footer-copyright {
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.75rem;
+}
+
+@media (min-width: 576px) {
+  footer.sticky-bottom.site-footer .footer-social {
+    margin-top: 0;
+    text-align: right;
+  }
+  footer.sticky-bottom.site-footer .footer-social .contact-icons a {
+    margin-right: 0;
+    margin-left: 0.75rem;
   }
 }
 

@@ -1,0 +1,8 @@
+{%- comment -%} Tag label for a Creative Space category, e.g. "photographs" -> "Photos". {%- endcomment -%}
+{%- case include.category -%}
+  {%- when 'blogs' -%}Blog
+  {%- when 'poems' -%}Poem
+  {%- when 'photographs' -%}Photos
+  {%- when 'videos' -%}Video
+  {%- else -%}{{ include.category | capitalize }}
+{%- endcase -%}

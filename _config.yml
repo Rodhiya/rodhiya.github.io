@@ -173,6 +173,9 @@ collections:
   projects:
     output: true
     permalink: /projects/:path/
+  creative:
+    output: true
+    permalink: /creative/:path/
 
 news_scrollable: true # adds a vertical scroll bar if there are more than 3 news items
 news_limit: 5 # leave blank to include all the news in the `_news` folder
@@ -227,6 +230,11 @@ defaults:
       path: "assets/**/*.*"
     values:
       sitemap: false
+  - scope:
+      path: ""
+      type: creative
+    values:
+      layout: creative
 
 # -----------------------------------------------------------------------------
 # Jekyll Minifier

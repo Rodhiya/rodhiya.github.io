@@ -2,7 +2,7 @@
 layout: page
 title: Gym-Powered Water Purifier
 description: A reverse-osmosis purifier driven by mechanical energy from exercise equipment.
-img: assets/img/7.jpg
+img: assets/img/gymPoweredRO.jpg
 importance: 6
 category: engineering
 ---

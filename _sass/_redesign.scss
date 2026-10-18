@@ -255,3 +255,159 @@ footer.sticky-bottom.site-footer {
     }
   }
 }
+
+// Projects: category headings come from display_categories (e.g. "research")
+
+.projects h2.category {
+  text-transform: capitalize;
+  color: var(--global-year-color);  // same as the publication years
+}
+
+// Creative Space: listing page cards
+
+.projects.creative {
+  .card-title {
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+
+  .card-img-top {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    max-width: 100%;  // the theme caps images at 90vw, which leaves a gap on phones
+  }
+
+  .card-date {
+    font-size: 0.8rem;
+    color: var(--global-text-color-light);
+    margin-bottom: 0;
+  }
+
+  .creative-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .creative-filter {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.9rem;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 999px;
+    background-color: transparent;
+    color: var(--global-text-color);
+    cursor: pointer;
+
+    &:hover {
+      border-color: var(--global-theme-color);
+      color: var(--global-theme-color);
+    }
+
+    &.active,
+    &.active:hover {
+      background-color: var(--global-button-bg-color);
+      border-color: var(--global-button-bg-color);
+      color: var(--global-button-text-color);
+    }
+  }
+
+  .creative-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 1rem;
+    align-items: start;
+  }
+
+  .creative-tag {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--global-theme-color);
+    margin-bottom: 0.35rem;
+  }
+
+  .creative-empty {
+    color: var(--global-text-color-light);
+  }
+}
+
+// Creative Space: individual posts
+
+.creative-post {
+  .post-meta {
+    font-size: 0.9rem;
+    color: var(--global-text-color-light);
+    margin-bottom: 0.5rem;
+  }
+
+  .creative-video {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    margin-bottom: 2rem;
+
+    iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      border-radius: 6px;
+    }
+  }
+
+  // Keep the line breaks of a poem as written.
+  .creative-content.poem p {
+    white-space: pre-line;
+    line-height: 1.8;
+  }
+
+  .creative-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+
+    figure {
+      margin: 0;
+    }
+
+    img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      border-radius: 4px;
+      cursor: zoom-in;
+    }
+
+    // Zoomed images should show the whole photo, not the cropped thumbnail.
+    img.medium-zoom-image--opened {
+      object-fit: contain;
+      border-radius: 0;
+    }
+
+    figcaption {
+      font-size: 0.85rem;
+      color: var(--global-text-color-light);
+      margin-top: 0.4rem;
+
+      .flickr-link {
+        display: block;
+        font-size: 0.75rem;
+      }
+    }
+  }
+
+  // Flickr album embeds pasted into the post body
+  .creative-content a[data-flickr-embed] img {
+    width: 100%;
+    height: auto;
+  }
+
+  .creative-back {
+    margin-top: 3rem;
+    font-size: 0.9rem;
+  }
+}

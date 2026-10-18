@@ -1,0 +1,33 @@
+<!-- _includes/creative_card.html -->
+{%- comment -%}
+  Thumbnail: the post's `img`, else its first photo, else its YouTube thumbnail.
+  Local paths are relative to assets/img/creative/; full URLs (e.g. Flickr) are used as-is.
+{%- endcomment -%}
+{%- assign thumb = post.img -%}
+{%- if thumb == nil and post.photos -%}
+  {%- assign thumb = post.photos.first.src -%}
+{%- endif -%}
+{%- if thumb -%}
+  {%- unless thumb contains '://' -%}
+    {%- assign thumb = thumb | prepend: '/assets/img/creative/' | relative_url -%}
+  {%- endunless -%}
+{%- elsif post.youtube_id -%}
+  {%- assign thumb = post.youtube_id | prepend: 'https://img.youtube.com/vi/' | append: '/mqdefault.jpg' -%}
+{%- endif -%}
+<div class="creative-item" data-category="{{ post.category }}">
+  <a href="{{ post.url | relative_url }}">
+    <div class="card hoverable">
+      {%- if thumb %}
+      <img class="card-img-top" src="{{ thumb }}" alt="{{ post.title }}" loading="lazy">
+      {%- endif %}
+      <div class="card-body">
+        <span class="creative-tag">{% include creative_label.html category=post.category %}</span>
+        <h2 class="card-title">{{ post.title }}</h2>
+        {%- if post.description %}
+        <p class="card-text">{{ post.description }}</p>
+        {%- endif %}
+        <p class="card-date">{{ post.date | date: "%b %-d, %Y" }}</p>
+      </div>
+    </div>
+  </a>
+</div>

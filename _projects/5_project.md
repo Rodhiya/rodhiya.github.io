@@ -2,7 +2,7 @@
 layout: page
 title: Vapor Chamber for Fiber-Laser Cooling
 description: A vapor-chamber and heat-sink assembly to air-cool a high-power fiber laser.
-img: assets/img/5.jpg
+img: assets/img/DRDO.png
 importance: 5
 category: engineering
 ---

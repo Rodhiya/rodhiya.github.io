@@ -1,0 +1,59 @@
+---
+layout: default
+---
+<!-- creative.html -->
+        <div class="post creative-post">
+
+          <header class="post-header">
+            <h1 class="post-title">{{ page.title }}</h1>
+            <p class="post-meta">
+              {{ page.date | date: "%B %-d, %Y" }}
+              {%- if page.category %} &middot; <a class="creative-tag" href="{{ '/creative/' | relative_url }}#{{ page.category }}">{% include creative_label.html category=page.category %}</a>{%- endif %}
+            </p>
+            {%- if page.description %}
+            <p class="post-description">{{ page.description }}</p>
+            {%- endif %}
+          </header>
+
+          <article>
+            {%- if page.youtube_id %}
+            <!-- YouTube video (privacy-enhanced mode: no cookies until play) -->
+            <div class="creative-video">
+              <iframe src="https://www.youtube-nocookie.com/embed/{{ page.youtube_id }}" title="{{ page.title }}" loading="lazy"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            {%- endif %}
+
+            <div class="creative-content{% if page.category == 'poems' %} poem{% endif %}">
+              {{ content }}
+            </div>
+
+            {%- if page.photos %}
+            <!-- Photo gallery: local paths are relative to assets/img/creative/, full URLs (e.g. Flickr) are used as-is -->
+            <div class="creative-gallery">
+              {%- for photo in page.photos %}
+              {%- if photo.src contains '://' -%}
+                {%- assign photo_src = photo.src -%}
+              {%- else -%}
+                {%- assign photo_src = photo.src | prepend: '/assets/img/creative/' | relative_url -%}
+              {%- endif %}
+              <figure>
+                <img src="{{ photo_src }}" alt="{{ photo.caption | default: page.title }}" loading="lazy" data-zoomable>
+                {%- if photo.caption or photo.link %}
+                <figcaption>
+                  {{ photo.caption }}
+                  {%- if photo.link %}
+                  <a class="flickr-link" href="{{ photo.link }}" target="_blank" rel="noopener">View on Flickr</a>
+                  {%- endif %}
+                </figcaption>
+                {%- endif %}
+              </figure>
+              {%- endfor %}
+            </div>
+            {%- endif %}
+          </article>
+
+          <p class="creative-back"><a href="{{ '/creative/' | relative_url }}">&larr; Back to Creative Space</a></p>
+
+        </div>

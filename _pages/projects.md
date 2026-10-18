@@ -1,6 +1,6 @@
 ---
 layout: page
-title: projects
+title: Projects
 permalink: /projects/
 description: Research and engineering projects in turbulence, combustion, and thermal-fluid systems.
 nav: true

@@ -1116,6 +1116,12 @@ footer.sticky-bottom.site-footer .footer-copyright {
 .projects h2.category {
   text-transform: capitalize;
   color: var(--global-year-color);
+  text-align: left;
+}
+
+.projects .card-title {
+  font-size: 1.25rem;
+  font-weight: 500;
 }
 
 .projects.creative .card-title {

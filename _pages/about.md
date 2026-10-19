@@ -9,7 +9,6 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   address: >
-    <p>1216, 12th floor</p>
     <p>370, Jay Street</p>
     <p>Brooklyn, New York, 11201</p>
 

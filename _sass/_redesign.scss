@@ -261,6 +261,12 @@ footer.sticky-bottom.site-footer {
 .projects h2.category {
   text-transform: capitalize;
   color: var(--global-year-color);  // same as the publication years
+  text-align: left;
+}
+
+.projects .card-title {
+  font-size: 1.25rem;
+  font-weight: 500;
 }
 
 // Creative Space: listing page cards

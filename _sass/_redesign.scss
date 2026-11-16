@@ -447,6 +447,8 @@ footer.sticky-bottom.site-footer {
   // Chart series colors (validated for color-blind separation in both themes)
   --sc-series-1: #2a78d6;
   --sc-series-2: #eb6834;
+  --sc-series-3: #1baf7a;
+  --sc-series-4: #6250d6;
 
   .sc-hero {
     margin-bottom: 2rem;
@@ -636,6 +638,48 @@ footer.sticky-bottom.site-footer {
     &.sc-s2 { background-color: var(--sc-series-2); }
   }
 
+  .sc-swatch {
+    &.sc-s3 { background-color: var(--sc-series-3); }
+    &.sc-s4 { background-color: var(--sc-series-4); }
+    &.sc-ideal {
+      height: 0;
+      border-top: 2px dashed var(--global-text-color-light);
+      border-radius: 0;
+    }
+  }
+
+  .sc-line {
+    fill: none;
+    stroke-width: 2;
+    stroke-linejoin: round;
+
+    &.sc-s3 { stroke: var(--sc-series-3); }
+    &.sc-s4 { stroke: var(--sc-series-4); }
+  }
+
+  .sc-ideal-line {
+    fill: none;
+    stroke: var(--global-text-color-light);
+    stroke-width: 1.5;
+    stroke-dasharray: 5 4;
+  }
+
+  .sc-points circle {
+    stroke: var(--global-bg-color);
+    stroke-width: 2;
+
+    &.sc-s3 { fill: var(--sc-series-3); }
+    &.sc-s4 { fill: var(--sc-series-4); }
+
+    &:hover { r: 7; }
+  }
+
+  .sc-values .sc-note {
+    font-size: 11px;
+    font-weight: 400;
+    fill: var(--global-text-color-light);
+  }
+
   .sc-bars {
     .sc-s1 { fill: var(--sc-series-1); }
     .sc-s2 { fill: var(--sc-series-2); }
@@ -666,4 +710,6 @@ footer.sticky-bottom.site-footer {
 html[data-theme='dark'] .sc-page {
   --sc-series-1: #3987e5;
   --sc-series-2: #d95926;
+  --sc-series-3: #199e70;
+  --sc-series-4: #9085e9;
 }

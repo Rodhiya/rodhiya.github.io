@@ -932,8 +932,9 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (min-width: 576px) {
   .navbar.navbar-light .navbar-nav .nav-item .nav-link {
-    padding-left: 1.75rem;
-    padding-right: 1.75rem;
+    padding-left: 1.1rem;
+    padding-right: 1.1rem;
+    white-space: nowrap;
   }
   .navbar .toggle-container {
     position: absolute;
@@ -1239,6 +1240,24 @@ footer.sticky-bottom.site-footer .footer-copyright {
 .creative-post .creative-back {
   margin-top: 3rem;
   font-size: 0.9rem;
+}
+
+.table.scaling-table {
+  width: auto;
+  color: var(--global-text-color);
+  margin-bottom: 1.25rem;
+}
+.table.scaling-table th,
+.table.scaling-table td {
+  padding: 0.3rem 1.25rem 0.3rem 0 !important;
+  line-height: 1.5;
+  border-color: var(--global-divider-color);
+}
+
+.post article h3 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-top: 1.5rem;
 }
 
 /*# sourceMappingURL=main.css.map */

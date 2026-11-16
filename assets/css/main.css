@@ -1262,12 +1262,20 @@ footer.sticky-bottom.site-footer .footer-copyright {
 
 .sc-page {
   --sc-series-1: #2a78d6;
+  --sc-abstract-bg: #eaf0f6;
   --sc-series-2: #eb6834;
   --sc-series-3: #1baf7a;
   --sc-series-4: #6250d6;
 }
 .sc-page .sc-hero {
   margin-bottom: 2rem;
+}
+.sc-page .sc-hero .sc-greeting {
+  font-size: 1.05rem;
+  background-color: var(--sc-abstract-bg);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.25rem;
 }
 .sc-page .sc-hero .sc-pitch {
   font-size: 1.25rem;
@@ -1503,6 +1511,7 @@ footer.sticky-bottom.site-footer .footer-copyright {
 
 html[data-theme=dark] .sc-page {
   --sc-series-1: #3987e5;
+  --sc-abstract-bg: #1f2833;
   --sc-series-2: #d95926;
   --sc-series-3: #199e70;
   --sc-series-4: #9085e9;

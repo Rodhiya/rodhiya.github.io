@@ -515,6 +515,21 @@ footer.sticky-bottom.site-footer {
   }
 
   // Videos: square turbulence clip beside the wide combustor clip
+  .sc-lead {
+    font-size: 0.95rem;
+    color: var(--global-text-color-light);
+    margin-bottom: 0.75rem;
+  }
+
+  .sc-section-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--global-theme-color);
+    margin-bottom: 0.5rem;
+  }
+
   .sc-media {
     display: grid;
     grid-template-columns: 1fr 2.4fr;

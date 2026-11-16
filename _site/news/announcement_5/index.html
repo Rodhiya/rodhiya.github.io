@@ -10,7 +10,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>DISCOVER ACCESS Allocation | Akash Rodhiya</title>
+    <title>Awarded 1.5 million ACCESS credits for multi-GPU turbulence simulations | Akash Rodhiya</title>
     <meta name="author" content="Akash  Rodhiya">
     <meta name="description" content="Personal academic website of Akash Rodhiya, PhD researcher in turbulence and computational fluid dynamics at NYU Tandon School of Engineering.
 ">
@@ -33,7 +33,7 @@
     
     <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%F0%9F%8C%8A&lt;/text&gt;&lt;/svg&gt;">
     
-    <link rel="stylesheet" href="/assets/css/main.css?v=1794841603">
+    <link rel="stylesheet" href="/assets/css/main.css?v=1794863624">
     <link rel="canonical" href="http://localhost:4000/news/announcement_5/">
     
     <!-- Dark Mode -->
@@ -120,7 +120,7 @@
 <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">DISCOVER ACCESS Allocation</h1>
+    <h1 class="post-title">Awarded 1.5 million ACCESS credits for multi-GPU turbulence simulations</h1>
     <p class="post-meta">July 28, 2026</p>
     <p class="post-tags">
       <a href="/blog/2026"> <i class="fas fa-calendar fa-sm"></i> 2026 </a>
@@ -129,7 +129,19 @@
   </header>
 
   <article class="post-content">
-    <p>Awarded a DISCOVER ACCESS allocation of 750,000 credits to support scaling and testing a multi-GPU code for Homogeneous Isotropic Turbulence simulations.</p>
+    <p>I’ve been awarded a <strong>Discover allocation of 1.5 million credits</strong> from <a href="https://access-ci.org/" rel="external nofollow noopener" target="_blank">ACCESS</a>, the NSF-funded program that provides computing resources at national supercomputing centers. <strong>750,000 credits are available now</strong>, with the remainder to follow.</p>
+
+<p>The allocation supports developing and scaling my <strong>multi-node, multi-GPU pseudo-spectral solver</strong> for homogeneous isotropic turbulence. The code is written in C++/CUDA and uses cuFFTMp for distributed 3-D FFTs, NVSHMEM for GPU-to-GPU communication, and MPI. Each stage of the port has been validated to machine precision against independent reference solvers.</p>
+
+<p>With these resources, I’m:</p>
+
+<ul>
+  <li>testing and optimizing the code on NVIDIA A100 nodes at NCSA Delta;</li>
+  <li>scaling it from a single node to many nodes; and</li>
+  <li>working toward <strong>8192³ direct numerical simulations</strong> of decaying turbulence, well beyond the 4096³ grids I have run so far.</li>
+</ul>
+
+<p>The latest results, including a 58× speedup over our CPU code on a single node, are on my <a href="/conferences/sc26/">SC’26 page</a>.</p>
 
   </article>
 </div>

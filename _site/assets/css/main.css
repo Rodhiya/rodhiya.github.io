@@ -1260,4 +1260,202 @@ footer.sticky-bottom.site-footer .footer-copyright {
   margin-top: 1.5rem;
 }
 
+.sc-page {
+  --sc-series-1: #2a78d6;
+  --sc-series-2: #eb6834;
+}
+.sc-page .sc-hero {
+  margin-bottom: 2rem;
+}
+.sc-page .sc-hero .sc-pitch {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
+}
+.sc-page .sc-hero .sc-open {
+  font-size: 0.95rem;
+  margin-bottom: 1.25rem;
+}
+.sc-page .sc-hero .sc-open-label {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--global-theme-color);
+  margin-right: 0.4rem;
+}
+.sc-page .sc-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.sc-page .sc-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 999px;
+  color: var(--global-text-color);
+}
+.sc-page .sc-btn:hover {
+  border-color: var(--global-theme-color);
+  color: var(--global-theme-color);
+  text-decoration: none;
+}
+.sc-page .sc-btn-primary,
+.sc-page .sc-btn-primary:hover {
+  background-color: var(--global-button-bg-color);
+  border-color: var(--global-button-bg-color);
+  color: var(--global-button-text-color);
+}
+.sc-page .sc-media {
+  display: grid;
+  grid-template-columns: 1fr 2.4fr;
+  gap: 1rem;
+  align-items: start;
+  margin-bottom: 2rem;
+}
+.sc-page .sc-media figure {
+  margin: 0;
+}
+.sc-page .sc-media video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  background-color: var(--global-panel-bg-color);
+}
+.sc-page .sc-media figcaption {
+  font-size: 0.8rem;
+  color: var(--global-text-color-light);
+  margin-top: 0.4rem;
+  line-height: 1.4;
+}
+@media (max-width: 575px) {
+  .sc-page .sc-media {
+    grid-template-columns: 1fr;
+  }
+}
+.sc-page .sc-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
+}
+.sc-page .sc-stat {
+  padding: 1rem;
+  background-color: var(--global-panel-bg-color);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 6px;
+}
+.sc-page .sc-stat-value {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--global-theme-color);
+}
+.sc-page .sc-stat-label {
+  display: block;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  margin-top: 0.3rem;
+}
+.sc-page .sc-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin: 1.25rem 0 1.5rem;
+}
+@media (max-width: 575px) {
+  .sc-page .sc-cards {
+    grid-template-columns: 1fr;
+  }
+}
+.sc-page .sc-card {
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--global-divider-color);
+  border-left: 3px solid var(--global-theme-color);
+  border-radius: 4px;
+}
+.sc-page .sc-card h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+.sc-page .sc-card p {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+.sc-page .sc-chart {
+  margin: 1rem 0 1.25rem;
+}
+.sc-page .sc-chart svg {
+  display: block;
+  width: 100%;
+  max-width: 680px;
+  height: auto;
+}
+.sc-page .sc-chart figcaption {
+  font-size: 0.8rem;
+  color: var(--global-text-color-light);
+  margin-top: 0.5rem;
+  max-width: 680px;
+}
+.sc-page .sc-legend {
+  display: flex;
+  gap: 1.25rem;
+  font-size: 0.85rem;
+  margin-bottom: 0.25rem;
+}
+.sc-page .sc-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.sc-page .sc-swatch {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+}
+.sc-page .sc-swatch.sc-s1 {
+  background-color: var(--sc-series-1);
+}
+.sc-page .sc-swatch.sc-s2 {
+  background-color: var(--sc-series-2);
+}
+.sc-page .sc-bars .sc-s1 {
+  fill: var(--sc-series-1);
+}
+.sc-page .sc-bars .sc-s2 {
+  fill: var(--sc-series-2);
+}
+.sc-page .sc-bars path:hover {
+  opacity: 0.85;
+}
+.sc-page .sc-grid line {
+  stroke: var(--global-divider-color);
+  stroke-width: 1;
+}
+.sc-page .sc-axis text {
+  font-size: 12px;
+  fill: var(--global-text-color-light);
+}
+.sc-page .sc-axis .sc-group,
+.sc-page .sc-values text {
+  font-size: 13px;
+  font-weight: 600;
+  fill: var(--global-text-color);
+}
+
+html[data-theme=dark] .sc-page {
+  --sc-series-1: #3987e5;
+  --sc-series-2: #d95926;
+}
+
 /*# sourceMappingURL=main.css.map */

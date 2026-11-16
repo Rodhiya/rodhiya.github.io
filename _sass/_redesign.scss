@@ -440,3 +440,230 @@ footer.sticky-bottom.site-footer {
   font-weight: 500;
   margin-top: 1.5rem;
 }
+
+// SC'26 page: hero, media, stat tiles, cards and the speedup chart
+
+.sc-page {
+  // Chart series colors (validated for color-blind separation in both themes)
+  --sc-series-1: #2a78d6;
+  --sc-series-2: #eb6834;
+
+  .sc-hero {
+    margin-bottom: 2rem;
+
+    .sc-pitch {
+      font-size: 1.25rem;
+      line-height: 1.5;
+      margin-bottom: 0.75rem;
+    }
+
+    .sc-open {
+      font-size: 0.95rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .sc-open-label {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--global-theme-color);
+      margin-right: 0.4rem;
+    }
+  }
+
+  .sc-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .sc-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.85rem;
+    padding: 0.4rem 0.9rem;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 999px;
+    color: var(--global-text-color);
+
+    &:hover {
+      border-color: var(--global-theme-color);
+      color: var(--global-theme-color);
+      text-decoration: none;
+    }
+  }
+
+  .sc-btn-primary,
+  .sc-btn-primary:hover {
+    background-color: var(--global-button-bg-color);
+    border-color: var(--global-button-bg-color);
+    color: var(--global-button-text-color);
+  }
+
+  // Videos: square turbulence clip beside the wide combustor clip
+  .sc-media {
+    display: grid;
+    grid-template-columns: 1fr 2.4fr;
+    gap: 1rem;
+    align-items: start;
+    margin-bottom: 2rem;
+
+    figure {
+      margin: 0;
+    }
+
+    video {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      background-color: var(--global-panel-bg-color);
+    }
+
+    figcaption {
+      font-size: 0.8rem;
+      color: var(--global-text-color-light);
+      margin-top: 0.4rem;
+      line-height: 1.4;
+    }
+
+    @media (max-width: 575px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .sc-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.75rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .sc-stat {
+    padding: 1rem;
+    background-color: var(--global-panel-bg-color);
+    border: 1px solid var(--global-divider-color);
+    border-radius: 6px;
+  }
+
+  .sc-stat-value {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--global-theme-color);
+  }
+
+  .sc-stat-label {
+    display: block;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    margin-top: 0.3rem;
+  }
+
+  .sc-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    margin: 1.25rem 0 1.5rem;
+
+    @media (max-width: 575px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .sc-card {
+    padding: 1rem 1.1rem;
+    border: 1px solid var(--global-divider-color);
+    border-left: 3px solid var(--global-theme-color);
+    border-radius: 4px;
+
+    h4 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+
+    p {
+      font-size: 0.88rem;
+      line-height: 1.5;
+      margin-bottom: 0;
+    }
+  }
+
+  // Speedup chart (inline SVG)
+  .sc-chart {
+    margin: 1rem 0 1.25rem;
+
+    svg {
+      display: block;
+      width: 100%;
+      max-width: 680px;
+      height: auto;
+    }
+
+    figcaption {
+      font-size: 0.8rem;
+      color: var(--global-text-color-light);
+      margin-top: 0.5rem;
+      max-width: 680px;
+    }
+  }
+
+  .sc-legend {
+    display: flex;
+    gap: 1.25rem;
+    font-size: 0.85rem;
+    margin-bottom: 0.25rem;
+
+    span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+  }
+
+  .sc-swatch {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+
+    &.sc-s1 { background-color: var(--sc-series-1); }
+    &.sc-s2 { background-color: var(--sc-series-2); }
+  }
+
+  .sc-bars {
+    .sc-s1 { fill: var(--sc-series-1); }
+    .sc-s2 { fill: var(--sc-series-2); }
+
+    path:hover {
+      opacity: 0.85;
+    }
+  }
+
+  .sc-grid line {
+    stroke: var(--global-divider-color);
+    stroke-width: 1;
+  }
+
+  .sc-axis text {
+    font-size: 12px;
+    fill: var(--global-text-color-light);
+  }
+
+  .sc-axis .sc-group,
+  .sc-values text {
+    font-size: 13px;
+    font-weight: 600;
+    fill: var(--global-text-color);
+  }
+}
+
+html[data-theme='dark'] .sc-page {
+  --sc-series-1: #3987e5;
+  --sc-series-2: #d95926;
+}

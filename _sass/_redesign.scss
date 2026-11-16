@@ -29,8 +29,9 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (min-width: 576px) {
   .navbar.navbar-light .navbar-nav .nav-item .nav-link {
-    padding-left: 1.75rem;
-    padding-right: 1.75rem;
+    padding-left: 1.1rem;
+    padding-right: 1.1rem;
+    white-space: nowrap;
   }
 
   .navbar .toggle-container {
@@ -416,4 +417,26 @@ footer.sticky-bottom.site-footer {
     margin-top: 3rem;
     font-size: 0.9rem;
   }
+}
+
+// Conference pages: small results tables
+
+.table.scaling-table {
+  width: auto;
+  color: var(--global-text-color);
+  margin-bottom: 1.25rem;
+
+  th,
+  td {
+    padding: 0.3rem 1.25rem 0.3rem 0 !important;
+    line-height: 1.5;
+    border-color: var(--global-divider-color);
+  }
+}
+
+// Sub-headings inside page content (e.g. the SC'26 page), smaller than the h2 sections
+.post article h3 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-top: 1.5rem;
 }

@@ -78,7 +78,7 @@
         - MPI, OpenMP, Slurm, pseudo-spectral & finite-difference DNS, cuFFT, GPU acceleration (CuPy), large-scale (multi-TB) post-processing
     - title: HPC Platforms
       items:
-        - TACC (Frontera, via ACCESS), NYU Greene, KAUST Shaheen III
+        - TACC Stampede3 (via ACCESS), NCSA Delta (via ACCESS), OLCF Summit, NYU Greene and Torch, KAUST Shaheen III, NERSC Cori, SahasraT (SERC, IISc), Fram (Norway), PARAM Sanganak (IIT Kanpur)
     - title: Simulation / Engineering Tools
       items:
         - STAR-CCM+, ANSYS, HyperMesh, SolidWorks, VisIt, Matplotlib

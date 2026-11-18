@@ -32,7 +32,7 @@
     
     <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%F0%9F%8C%8A&lt;/text&gt;&lt;/svg&gt;">
     
-    <link rel="stylesheet" href="/assets/css/main.css?v=1794870479">
+    <link rel="stylesheet" href="/assets/css/main.css?v=1795011603">
     <link rel="canonical" href="http://localhost:4000/conferences/sc26/">
     
     <!-- Dark Mode -->
@@ -191,6 +191,67 @@
     <h4>Data-driven and ML models</h4>
     <p>Co-developed co-kurtosis PCA, a reduced-order method for stiff chemistry, and am developing ML surrogates that forecast energy spectra and generate velocity fields, compared against DNS.</p>
   </div>
+</div>
+
+  <p>Earlier, I worked on thermal management: designing a two-phase vapor chamber and pin-fin heat sink to cool an 800 W fiber laser (at a defense lab), and studying phase-change-material thermal storage with CFD (STAR-CCM+) and experiments.</p>
+
+  <div class="sc-thermal">
+  <figure>
+    <svg class="sc-diagram" viewbox="0 0 590 320" role="img" aria-labelledby="vc-title">
+      <title id="vc-title">Schematic of the vapor-chamber and pin-fin heat sink design</title>
+      <defs>
+        <marker id="vc-arrow" viewbox="0 0 10 10" refx="8" refy="5" markerwidth="5" markerheight="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" class="vc-arrowhead"></path></marker>
+        <marker id="vc-air" viewbox="0 0 10 10" refx="8" refy="5" markerwidth="5" markerheight="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" class="vc-air-head"></path></marker>
+      </defs>
+      <!-- heat sources -->
+      <rect class="vc-source" x="100" y="8" width="140" height="26" rx="3"></rect>
+      <text class="vc-on-source" x="170" y="27" text-anchor="middle">Heat source</text>
+      <rect class="vc-source" x="100" y="286" width="140" height="26" rx="3"></rect>
+      <text class="vc-on-source" x="170" y="305" text-anchor="middle">Heat source</text>
+      <!-- top vapor chamber -->
+      <rect class="vc-wall" x="40" y="36" width="260" height="30"></rect>
+      <rect class="vc-wick" x="44" y="40" width="252" height="22"></rect>
+      <rect class="vc-vapor" x="44" y="45" width="252" height="12"></rect>
+      <line class="vc-flow" x1="155" y1="51" x2="70" y2="51" marker-end="url(#vc-arrow)"></line>
+      <line class="vc-flow" x1="185" y1="51" x2="270" y2="51" marker-end="url(#vc-arrow)"></line>
+      <!-- bottom vapor chamber -->
+      <rect class="vc-wall" x="40" y="254" width="260" height="30"></rect>
+      <rect class="vc-wick" x="44" y="258" width="252" height="22"></rect>
+      <rect class="vc-vapor" x="44" y="263" width="252" height="12"></rect>
+      <line class="vc-flow" x1="155" y1="269" x2="70" y2="269" marker-end="url(#vc-arrow)"></line>
+      <line class="vc-flow" x1="185" y1="269" x2="270" y2="269" marker-end="url(#vc-arrow)"></line>
+      <!-- pin fins -->
+      <g class="vc-pins"><rect x="56" y="66" width="12" height="188" rx="2"></rect><rect x="88" y="66" width="12" height="188" rx="2"></rect><rect x="120" y="66" width="12" height="188" rx="2"></rect><rect x="152" y="66" width="12" height="188" rx="2"></rect><rect x="184" y="66" width="12" height="188" rx="2"></rect><rect x="216" y="66" width="12" height="188" rx="2"></rect><rect x="248" y="66" width="12" height="188" rx="2"></rect><rect x="280" y="66" width="12" height="188" rx="2"></rect></g>
+      <!-- air flow -->
+      <g class="vc-airflow">
+        <line x1="0" y1="130" x2="34" y2="130" marker-end="url(#vc-air)"></line>
+        <line x1="0" y1="160" x2="34" y2="160" marker-end="url(#vc-air)"></line>
+        <line x1="0" y1="190" x2="34" y2="190" marker-end="url(#vc-air)"></line>
+      </g>
+      <text class="vc-label" x="16" y="114" text-anchor="middle">Air</text>
+      <!-- leader labels -->
+      <g class="vc-leaders">
+        <polyline points="298,38 318,20 326,20"></polyline>
+        <polyline points="292,42 318,52 326,52"></polyline>
+        <polyline points="262,51 318,84 326,84"></polyline>
+        <polyline points="292,160 326,160"></polyline>
+      </g>
+      <text class="vc-label" x="330" y="26">Copper wall, 1 mm</text>
+      <text class="vc-label" x="330" y="58">Copper-foam wick, 0.5 mm</text>
+      <text class="vc-label" x="330" y="90">Vapor space, 2 mm (water)</text>
+      <text class="vc-label" x="330" y="166">Aluminum pin fins,</text>
+      <text class="vc-label" x="330" y="190">staggered, forced air</text>
+      <text class="vc-note" x="330" y="305">Not to scale</text>
+    </svg>
+    <figcaption><strong>Vapor chamber + pin-fin heat sink.</strong> My design, redrawn: each heat source is spread by a water-filled copper vapor chamber into a shared aluminum pin-fin array, sized to reject 800 W in a 450 × 250 × 120 mm envelope. A copper-foam wick was chosen over sintered powder because its capillary pressure exceeds the liquid flow loss.</figcaption>
+  </figure>
+  <figure>
+    <div class="sc-figure-frame">
+      <img src="/assets/img/sc26/pcm_melt_curve.png" alt="Simulated solid volume fraction of paraffin wax falling from 1 to about 0.35 over 7200 seconds" loading="lazy">
+      <img src="/assets/img/sc26/pcm_melt_contour.png" alt="Contour of solid volume fraction showing the melt front in the paraffin layer" loading="lazy">
+    </div>
+    <figcaption><strong>Phase-change thermal storage (B.Tech project).</strong> STAR-CCM+ simulation of paraffin melting around a hot-water tube (80 °C inlet): the solid fraction (svf) falls from 1 to about 0.35 in 2 hours. The contour shows the melt front (blue = liquid, red = solid).</figcaption>
+  </figure>
 </div>
 
   <h2 id="computational-toolkit">Computational toolkit</h2>

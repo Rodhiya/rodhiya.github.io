@@ -530,6 +530,70 @@ footer.sticky-bottom.site-footer {
     margin-bottom: 0.5rem;
   }
 
+  .sc-thermal {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    align-items: start;
+    margin: 1rem 0 2.5rem;
+
+    @media (max-width: 575px) {
+      grid-template-columns: 1fr;
+    }
+
+    figure {
+      margin: 0;
+    }
+
+    figcaption {
+      font-size: 0.8rem;
+      color: var(--global-text-color-light);
+      margin-top: 0.5rem;
+      line-height: 1.45;
+
+      strong {
+        color: var(--global-text-color);
+      }
+    }
+
+    .sc-figure-frame {
+      background: #fff;
+      border-radius: 6px;
+      padding: 0.5rem;
+      border: 1px solid var(--global-divider-color);
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      img + img {
+        margin-top: 0.5rem;
+      }
+    }
+  }
+
+  .sc-diagram {
+    width: 100%;
+    height: auto;
+    display: block;
+
+    .vc-source { fill: #c2410c; }
+    .vc-on-source { fill: #fff; font-size: 16px; font-weight: 600; }
+    .vc-wall { fill: #b87333; }
+    .vc-wick { fill: #e8b98a; }
+    .vc-vapor { fill: var(--global-bg-color); }
+    .vc-flow { stroke: #8a4f1d; stroke-width: 2; }
+    .vc-arrowhead { fill: #8a4f1d; }
+    .vc-pins rect { fill: #a3acb6; }
+    .vc-airflow line { stroke: var(--sc-series-1); stroke-width: 2; }
+    .vc-air-head { fill: var(--sc-series-1); }
+    .vc-leaders polyline { fill: none; stroke: var(--global-text-color-light); stroke-width: 1; }
+    .vc-label { fill: var(--global-text-color); font-size: 18px; }
+    .vc-note { fill: var(--global-text-color-light); font-size: 15px; font-style: italic; }
+  }
+
   .sc-media {
     display: grid;
     grid-template-columns: 1fr 2.4fr;

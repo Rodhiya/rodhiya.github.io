@@ -1334,6 +1334,97 @@ footer.sticky-bottom.site-footer .footer-copyright {
   color: var(--global-theme-color);
   margin-bottom: 0.5rem;
 }
+.sc-page .sc-thermal {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  align-items: start;
+  margin: 1rem 0 2.5rem;
+}
+@media (max-width: 575px) {
+  .sc-page .sc-thermal {
+    grid-template-columns: 1fr;
+  }
+}
+.sc-page .sc-thermal figure {
+  margin: 0;
+}
+.sc-page .sc-thermal figcaption {
+  font-size: 0.8rem;
+  color: var(--global-text-color-light);
+  margin-top: 0.5rem;
+  line-height: 1.45;
+}
+.sc-page .sc-thermal figcaption strong {
+  color: var(--global-text-color);
+}
+.sc-page .sc-thermal .sc-figure-frame {
+  background: #fff;
+  border-radius: 6px;
+  padding: 0.5rem;
+  border: 1px solid var(--global-divider-color);
+}
+.sc-page .sc-thermal .sc-figure-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.sc-page .sc-thermal .sc-figure-frame img + img {
+  margin-top: 0.5rem;
+}
+.sc-page .sc-diagram {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.sc-page .sc-diagram .vc-source {
+  fill: #c2410c;
+}
+.sc-page .sc-diagram .vc-on-source {
+  fill: #fff;
+  font-size: 16px;
+  font-weight: 600;
+}
+.sc-page .sc-diagram .vc-wall {
+  fill: #b87333;
+}
+.sc-page .sc-diagram .vc-wick {
+  fill: #e8b98a;
+}
+.sc-page .sc-diagram .vc-vapor {
+  fill: var(--global-bg-color);
+}
+.sc-page .sc-diagram .vc-flow {
+  stroke: #8a4f1d;
+  stroke-width: 2;
+}
+.sc-page .sc-diagram .vc-arrowhead {
+  fill: #8a4f1d;
+}
+.sc-page .sc-diagram .vc-pins rect {
+  fill: #a3acb6;
+}
+.sc-page .sc-diagram .vc-airflow line {
+  stroke: var(--sc-series-1);
+  stroke-width: 2;
+}
+.sc-page .sc-diagram .vc-air-head {
+  fill: var(--sc-series-1);
+}
+.sc-page .sc-diagram .vc-leaders polyline {
+  fill: none;
+  stroke: var(--global-text-color-light);
+  stroke-width: 1;
+}
+.sc-page .sc-diagram .vc-label {
+  fill: var(--global-text-color);
+  font-size: 18px;
+}
+.sc-page .sc-diagram .vc-note {
+  fill: var(--global-text-color-light);
+  font-size: 15px;
+  font-style: italic;
+}
 .sc-page .sc-media {
   display: grid;
   grid-template-columns: 1fr 2.4fr;

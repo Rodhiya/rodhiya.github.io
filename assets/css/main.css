@@ -1392,7 +1392,7 @@ footer.sticky-bottom.site-footer .footer-copyright {
   fill: #e8b98a;
 }
 .sc-page .sc-diagram .vc-vapor {
-  fill: var(--global-bg-color);
+  fill: #fff;
 }
 .sc-page .sc-diagram .vc-flow {
   stroke: #8a4f1d;
@@ -1405,23 +1405,23 @@ footer.sticky-bottom.site-footer .footer-copyright {
   fill: #a3acb6;
 }
 .sc-page .sc-diagram .vc-airflow line {
-  stroke: var(--sc-series-1);
+  stroke: #2a78d6;
   stroke-width: 2;
 }
 .sc-page .sc-diagram .vc-air-head {
-  fill: var(--sc-series-1);
+  fill: #2a78d6;
 }
 .sc-page .sc-diagram .vc-leaders polyline {
   fill: none;
-  stroke: var(--global-text-color-light);
+  stroke: #6c757d;
   stroke-width: 1;
 }
 .sc-page .sc-diagram .vc-label {
-  fill: var(--global-text-color);
+  fill: #212529;
   font-size: 18px;
 }
 .sc-page .sc-diagram .vc-note {
-  fill: var(--global-text-color-light);
+  fill: #6c757d;
   font-size: 15px;
   font-style: italic;
 }

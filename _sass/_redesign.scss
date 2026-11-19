@@ -270,6 +270,14 @@ footer.sticky-bottom.site-footer {
   font-weight: 500;
 }
 
+// Project thumbnails share one shape so the cards line up
+.projects .grid-item .card img {
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
 // Creative Space: listing page cards
 
 .projects.creative {

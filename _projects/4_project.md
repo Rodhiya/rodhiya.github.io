@@ -2,7 +2,7 @@
 layout: page
 title: PCM Thermal Energy Storage
 description: A phase-change-material thermal battery, from CAD to CFD to an instrumented test rig.
-img: assets/img/BTP_picture.png
+img: assets/img/projects/pcm_storage.jpg
 importance: 4
 category: engineering
 ---

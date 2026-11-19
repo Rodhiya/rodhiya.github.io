@@ -32,7 +32,7 @@
     
     <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%F0%9F%8C%8A&lt;/text&gt;&lt;/svg&gt;">
     
-    <link rel="stylesheet" href="/assets/css/main.css?v=1795097821">
+    <link rel="stylesheet" href="/assets/css/main.css?v=1795098192">
     <link rel="canonical" href="https://rodhiya.github.io/conferences/sc26/">
     
     <!-- Dark Mode -->
@@ -359,7 +359,7 @@
     <li>
 <strong>Allocation:</strong> awarded <strong>1.5 million ACCESS credits</strong> through a Discover allocation for this work (750K available so far).</li>
     <li>
-<strong>Stack:</strong> hand-written CUDA kernels, cuFFTMp for distributed 3-D FFTs, NVSHMEM for GPU-initiated communication, and GPU-aware MPI.</li>
+<strong>Stack:</strong> hand-written CUDA kernels with two interchangeable distributed-FFT backends: cuFFTMp with NVSHMEM GPU-initiated communication, and my own local cuFFT plus GPU-aware <code class="language-plaintext highlighter-rouge">MPI_Alltoall</code>.</li>
     <li>
 <strong>Design:</strong> 1-D slab decomposition with one rank per GPU; all fields stay resident on the GPU.</li>
     <li>
@@ -559,20 +559,57 @@
     <li>
 <strong>Communication:</strong> the global transposes take ~34% of a step on 4 GPUs but ~47% on 2, because 2 GPUs share a single NVLink pair while 4 GPUs use three links in parallel.</li>
     <li>
-<strong>Next:</strong> scaling across nodes, on the way to 8192³ (see below).</li>
+<strong>Beyond one node:</strong> a GPU-aware MPI backend now runs 1024³ across nodes (see below), the path toward 2048³ and larger grids.</li>
   </ul>
 
   <h3 id="scaling-across-nodes">Scaling across nodes</h3>
 
-  <p>Taking the code beyond one node exposed a problem in the network layer below NVSHMEM, not in the solver. On Delta’s Slingshot-11 network, NVSHMEM traffic goes through libfabric’s CXI provider. With libfabric’s default memory-registration cache, the GPU-initiated transposes inside cuFFTMp hang at 512³ on two nodes. Turning the cache off restores correct, bitwise-reproducible results, but at a large cost, and 1024³ still hangs. The same code runs correctly across nodes on an InfiniBand cluster.</p>
+  <p>Taking the code beyond one node exposed a problem in the network layer below NVSHMEM, not in the solver. On Delta’s Slingshot-11 network, the GPU-initiated transposes inside cuFFTMp hang at 512³ on two nodes unless libfabric’s memory-registration cache is turned off. Turning it off makes steps about 16× slower at 256³, and 1024³ still hangs. The same code runs correctly across nodes on an InfiniBand cluster.</p>
+
+  <p>So I wrote a second version of the distributed FFT that does the transposes with local cuFFT and GPU-aware <code class="language-plaintext highlighter-rouge">MPI_Alltoall</code> instead. It reproduces the cuFFTMp results bit for bit. On two nodes (8 A100s) it is 5.6× faster than the cache-off workaround at 512³, and it runs 1024³, which the NVSHMEM path cannot.</p>
+
+  <div class="table-responsive">
+
+    <table class="table table-sm scaling-table">
+      <thead>
+        <tr>
+          <th>Grid, 2 nodes × 4 A100</th>
+          <th>GPU-aware MPI</th>
+          <th>cuFFTMp / NVSHMEM</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>256³</td>
+          <td>52 ms/step</td>
+          <td>65 ms (cache on), 1,053 ms (cache off)</td>
+        </tr>
+        <tr>
+          <td>512³</td>
+          <td>355 ms/step</td>
+          <td>hangs (cache on), 1,972 ms (cache off)</td>
+        </tr>
+        <tr>
+          <td>1024³</td>
+          <td>2.7 s/step</td>
+          <td>hangs</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
 
   <ul>
     <li>
-<strong>Diagnosis:</strong> systematically tested libfabric memory-registration cache monitors and NVSHMEM heap settings, checking every workaround run against reference statistics.</li>
+<strong>Diagnosis:</strong> systematically tested libfabric memory-registration cache monitors and NVSHMEM settings, checking every workaround run against reference statistics.</li>
     <li>
-<strong>Cost of the workaround:</strong> with the cache off, 256³ on 8 A100s goes from 62.5 ms to about 1 s per step. At 512³, only ~21 ms of a ~2 s step is GPU compute.</li>
+<strong>Network-limited:</strong> I benchmarked the network first with OSU GPU all-to-all tests. Each transform in the new version takes within ~15% of the raw all-to-all time at the same message size, so the step runs at the network limit.</li>
     <li>
-<strong>Next step:</strong> a portable backend that performs the distributed FFT over GPU-aware MPI (cuDecomp, or local cuFFT plus <code class="language-plaintext highlighter-rouge">MPI_Alltoall</code>), the vendor-supported path on Slingshot, while keeping cuFFTMp/NVSHMEM selectable on systems where it works well. I’m benchmarking GPU all-to-all performance across nodes first.</li>
+<strong>Validated:</strong> matches analytic Fourier modes to ~10<sup>-15</sup> from 32³ to 1024³ on 1–8 GPUs, and the velocity fields are bitwise identical to the cuFFTMp code at 256³, 512³ and 1024³.</li>
+    <li>
+<strong>Capacity, not speed:</strong> any grid that fits on one node still runs fastest there; 1024³ takes 366 ms per step on one node versus 2.7 s on two. Multi-node runs are what make 2048³ and larger grids possible.</li>
+    <li>
+<strong>Next:</strong> overlapping communication with computation, and runs beyond two nodes.</li>
   </ul>
 
   <h2 id="what-im-looking-for">What I’m looking for</h2>

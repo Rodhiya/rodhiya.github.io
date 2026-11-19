@@ -718,6 +718,9 @@ footer.sticky-bottom.site-footer {
     font-size: 0.85rem;
     margin-bottom: 0.25rem;
 
+    flex-wrap: wrap;
+    row-gap: 0.25rem;
+
     span {
       display: inline-flex;
       align-items: center;
@@ -750,6 +753,8 @@ footer.sticky-bottom.site-footer {
     stroke-width: 2;
     stroke-linejoin: round;
 
+    &.sc-s1 { stroke: var(--sc-series-1); }
+    &.sc-s2 { stroke: var(--sc-series-2); }
     &.sc-s3 { stroke: var(--sc-series-3); }
     &.sc-s4 { stroke: var(--sc-series-4); }
   }
@@ -765,10 +770,17 @@ footer.sticky-bottom.site-footer {
     stroke: var(--global-bg-color);
     stroke-width: 2;
 
+    &.sc-s1 { fill: var(--sc-series-1); }
+    &.sc-s2 { fill: var(--sc-series-2); }
     &.sc-s3 { fill: var(--sc-series-3); }
     &.sc-s4 { fill: var(--sc-series-4); }
 
     &:hover { r: 7; }
+  }
+
+  .sc-target {
+    font-size: 12px;
+    fill: var(--global-text-color-light);
   }
 
   .sc-values .sc-note {

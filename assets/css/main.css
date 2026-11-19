@@ -1125,6 +1125,13 @@ footer.sticky-bottom.site-footer .footer-copyright {
   font-weight: 500;
 }
 
+.projects .grid-item .card img {
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+
 .projects.creative .card-title {
   font-size: 1.1rem;
   font-weight: 500;

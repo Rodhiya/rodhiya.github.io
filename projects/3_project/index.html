@@ -32,7 +32,7 @@
     
     <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%F0%9F%8C%8A&lt;/text&gt;&lt;/svg&gt;">
     
-    <link rel="stylesheet" href="/assets/css/main.css?v=1795013179">
+    <link rel="stylesheet" href="/assets/css/main.css?v=1795097821">
     <link rel="canonical" href="https://rodhiya.github.io/projects/3_project/">
     
     <!-- Dark Mode -->
@@ -123,19 +123,214 @@
           </header>
 
           <article>
-            <p>To support the transition to carbon-neutral fuels in gas turbines, my Masters
-research studied high-pressure hydrogen/methane wrinkled laminar flames at reheat
-(sequential gas-turbine) conditions.</p>
+            <p>Sequential, or “reheat”, gas turbines burn fuel in two stages. In the second
+stage, fuel is injected into hot vitiated gas from the first and burns largely
+by <strong>spontaneous ignition</strong>. These combustors are a promising route to burning
+hydrogen for carbon-free power. In practice two modes coexist: spontaneous
+ignition in the hot bulk flow, and <strong>flame propagation</strong> in the cooler layers
+near the walls, which is also what controls flashback. How the balance between
+them shifts with operating pressure and fuel blend had not been quantified, even
+though burners are often developed with atmospheric-pressure tests.</p>
 
-<p>Using the massively parallel S3D solver with CHEMKIN/TRANSPORT and reduced San
-Diego mechanisms, I performed detailed-chemistry DNS and used chemical explosive
-mode analysis (CEMA) to quantify the split between spontaneous-ignition and
-flame-propagation fuel consumption as a function of pressure and hydrogen
-fraction.</p>
+<p>For my M.Tech (Research) at IISc Bangalore, with Prof. Konduri Aditya, I studied
+this with detailed-chemistry DNS. The work was a collaboration with SINTEF
+Energy Research, ZHAW and Sandia’s Combustion Research Facility.</p>
 
-<p>I also co-developed <strong>co-kurtosis PCA (CoK-PCA)</strong>, a high-order-moment
-dimensionality-reduction method that identifies stiff, extreme-valued chemical
-dynamics — such as ignition kernels — more accurately than standard PCA.</p>
+<div class="row justify-content-sm-center">
+  <div class="col-sm-10 mt-3 mt-md-0">
+    <video class="img-fluid rounded z-depth-1" autoplay="" muted="" loop="" playsinline="" preload="metadata" poster="/assets/video/sc26/reheat_combustor.jpg" aria-label="Animation of the temperature field in a reheat combustor">
+      <source src="/assets/video/sc26/reheat_combustor.mp4" type="video/mp4"></source>
+    </video>
+  </div>
+</div>
+<div class="caption">
+  Temperature in the simplified reheat combustor from a 2-D DNS of a hydrogen flame at 5 bar.
+</div>
+
+<h2 id="simulations">Simulations</h2>
+
+<ul>
+  <li>
+<strong>Solver:</strong> the massively parallel S3D code, a fully compressible solver
+with 8th-order central differences and 4th-order Runge–Kutta time stepping.
+It uses mixture-averaged transport through CHEMKIN and TRANSPORT.</li>
+  <li>
+<strong>Chemistry:</strong> a 9-species, 21-reaction mechanism for hydrogen and a
+21-species, 42-reaction reduced San Diego mechanism for hydrogen/methane
+blends.</li>
+  <li>
+<strong>Configuration:</strong> a simplified reheat combustor with a mixing duct opening
+into a combustion chamber, isothermal 750 K walls and turbulent inflow from a
+channel-flow DNS. The flame is resolved by at least 35 grid points, with
+5–22 μm grid spacing.</li>
+  <li>
+<strong>Parametric study:</strong> nine cases covering 1, 5 and 10 bar and hydrogen
+fractions of 100%, 70% and 50%. Inlet temperatures were adjusted to keep the
+ignition delay, and hence the flame position, fixed.</li>
+  <li>
+<strong>Analysis:</strong> chemical explosive mode analysis (CEMA) classifies each point
+as auto-ignition, assisted ignition (flame propagation) or extinction, so the
+fuel consumed by each mode can be measured directly.</li>
+  <li>
+<strong>Systems:</strong> SahasraT (IISc), Fram (Sigma2, Norway), Summit (OLCF) and Cori
+(NERSC).</li>
+</ul>
+
+<div class="row justify-content-sm-center">
+  <div class="col-sm-6 mt-3 mt-md-0">
+    <figure>
+
+  <picture>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/projects/reheat-combustion/setup.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="Combustor configuration" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+  </div>
+  <div class="col-sm-6 mt-3 mt-md-0">
+    <figure>
+
+  <picture>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/projects/reheat-combustion/temperature_2d_3d.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="2-D vs. 3-D DNS" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+  </div>
+</div>
+<div class="caption">
+  Left: the simplified reheat combustor and its multi-block layout. Right: instantaneous temperature (K) from an earlier 3-D DNS of this configuration (top, Aditya et al. 2019) and from the 2-D DNS in this study (bottom).
+</div>
+
+<h2 id="key-findings">Key findings</h2>
+
+<p><strong>2-D DNS are a cheap, reliable guide to trends.</strong> Compared with full 3-D DNS,
+the 2-D simulations produce a W-shaped flame instead of a V-shaped one, because
+of a thinner thermal boundary layer. The bias in the fraction of fuel burned by
+spontaneous ignition, however, is only about 10%. That bias can be accounted
+for, so affordable 2-D DNS can screen many burner variants and operating points
+early in design.</p>
+
+<p><strong>Higher pressure shifts combustion toward flame propagation.</strong> At 1 bar, about
+90% of the hydrogen is consumed by spontaneous ignition. At 10 bar the two modes
+consume comparable shares, with assisted ignition, or propagation, slightly
+ahead.</p>
+
+<div class="row justify-content-sm-center">
+  <div class="col-sm-6 mt-3 mt-md-0">
+    <figure>
+
+  <picture>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/projects/reheat-combustion/pressure_modes.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="Effect of pressure" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+  </div>
+  <div class="col-sm-6 mt-3 mt-md-0">
+    <figure>
+
+  <picture>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/projects/reheat-combustion/hydrogen_fraction.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="Effect of hydrogen fraction" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+  </div>
+</div>
+<div class="caption">
+  Combustion modes from CEMA (green: auto-ignition; red: assisted ignition; blue: extinction) and the fraction of fuel consumed in each. Left: 1, 5 and 10 bar. Right: hydrogen/methane blends, labelled (pressure in bar, H₂ fraction).
+</div>
+
+<p><strong>More hydrogen does the same.</strong> As the hydrogen fraction rises, the share of
+fuel burned by spontaneous ignition falls and propagation grows, more strongly
+at 5 bar than at 1 bar. This is counter-intuitive, since hydrogen is far more
+reactive than methane. It happens because methane-rich blends need hotter
+reactants to hold the flame in the same place. Since near-wall flame
+propagation controls flashback, atmospheric-pressure tests can understate how a
+hydrogen burner behaves at full load. That matters for designing
+hydrogen-ready reheat combustors.</p>
+
+<h2 id="co-kurtosis-pca-for-reduced-order-chemistry">Co-kurtosis PCA for reduced-order chemistry</h2>
+
+<p>Detailed chemistry makes these simulations expensive, and standard principal
+component analysis (PCA), the usual way to compress the thermochemical state,
+can miss rare but critical events such as ignition kernels. I co-authored
+<strong>co-kurtosis PCA (CoK-PCA)</strong>, which takes its principal directions from the
+fourth-order joint moment (the co-kurtosis tensor) instead of the covariance,
+so it picks up these extreme-valued, stiff dynamics. On ethylene–air
+auto-ignition and ethanol HCCI-engine datasets, it reconstructs species
+production and heat-release rates more accurately than PCA where the chemistry
+is active.</p>
+
+<div class="row justify-content-sm-center">
+  <div class="col-sm-5 mt-3 mt-md-0">
+    <figure>
+
+  <picture>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/projects/reheat-combustion/cokpca_synthetic.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="CoK-PCA on a synthetic dataset" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+  </div>
+</div>
+<div class="caption">
+  A synthetic dataset with a small cluster of extreme-valued samples. Principal vectors from PCA (red) follow the bulk variance; those from CoK-PCA (blue) point toward the anomalous event.
+</div>
+
+<h2 id="publications">Publications</h2>
+
+<ul>
+  <li>A. Rodhiya, A. Gruber, M. R. Bothien, J. H. Chen and K. Aditya, “Spontaneous
+ignition and flame propagation in hydrogen/methane wrinkled laminar flames at
+reheat conditions: Effect of pressure and hydrogen fraction,” <em>Combust.
+Flame</em> <strong>269</strong>, 113695 (2024).
+<a href="https://doi.org/10.1016/j.combustflame.2024.113695" rel="external nofollow noopener" target="_blank">doi:10.1016/j.combustflame.2024.113695</a>
+</li>
+  <li>A. Rodhiya, K. Aditya, A. Gruber and J. H. Chen, “Simulations of flame
+structure in a reheat burner: pressure scaling,” <em>AIAA Propulsion and Energy
+Forum</em> (2021). <a href="https://doi.org/10.2514/6.2021-3448" rel="external nofollow noopener" target="_blank">doi:10.2514/6.2021-3448</a>
+</li>
+  <li>A. Jonnalagadda, S. Kulkarni, A. Rodhiya, H. Kolla and K. Aditya, “A
+co-kurtosis based dimensionality reduction method for combustion datasets,”
+<em>Combust. Flame</em> <strong>250</strong>, 112635 (2023).
+<a href="https://doi.org/10.1016/j.combustflame.2023.112635" rel="external nofollow noopener" target="_blank">doi:10.1016/j.combustflame.2023.112635</a>
+</li>
+  <li>A. Rodhiya, M.Tech (Research) thesis, IISc (2022).
+<a href="https://etd.iisc.ac.in/handle/2005/5760" rel="external nofollow noopener" target="_blank">etd.iisc.ac.in/handle/2005/5760</a>
+</li>
+</ul>
+
+<p class="text-muted small">Figures reproduced from Rodhiya et al., <em>Combust. Flame</em> 269 (2024) and Jonnalagadda et al., <em>Combust. Flame</em> 250 (2023), © The Combustion Institute.</p>
+
+<script>
+  // Respect reduced-motion preferences: show the still poster instead of looping video.
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelectorAll('video[autoplay]').forEach(function(v) { v.removeAttribute('autoplay'); v.pause(); v.controls = true; });
+  }
+</script>
+
 
           </article>
 
